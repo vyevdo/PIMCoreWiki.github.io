@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brocard : Валидация данных (Список проверок)</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Brocard</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Discovery-phase_78839987.html">Discovery phase</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="82575438.html">Бизнес процессы, что необходимо изменить при отключении ETR, Tetra office brocard</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Brocard : Валидация данных (Список проверок)
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Yaroslav Rudenok</span>, last modified by <span class='editor'> Olga Tarasenko</span> on Feb 09, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <div class='plugin-tabmeta-details'><div class="table-wrap"><table class="confluenceTable"><colgroup><col/><col/></colgroup><tbody><tr><th class="confluenceTh">Целевая версия</th><td class="confluenceTd">1.0</td></tr><tr><th class="confluenceTh">Epic</th><td class="confluenceTd"></td></tr><tr><th class="confluenceTh">Статус документа</th><td class="confluenceTd"><span class="status-macro aui-lozenge">ЧЕРНОВИК</span></td></tr><tr><th class="confluenceTh">Владелец документа</th><td class="confluenceTd"><p><a class="confluence-userlink user-mention" data-username="y.rudenok@nodeart.io" href="https://wiki.nodeart.app/display/~y.rudenok@nodeart.io" data-linked-resource-id="33915157" data-linked-resource-version="2" data-linked-resource-type="userinfo" data-base-url="https://wiki.nodeart.app">Yaroslav Rudenok</a></p></td></tr><tr><th class="confluenceTh">Аналитик</th><td class="confluenceTd"><a class="confluence-userlink user-mention" data-username="y.rudenok@nodeart.io" href="https://wiki.nodeart.app/display/~y.rudenok@nodeart.io" data-linked-resource-id="33915157" data-linked-resource-version="2" data-linked-resource-type="userinfo" data-base-url="https://wiki.nodeart.app">Yaroslav Rudenok</a> </td></tr><tr><th class="confluenceTh">Разработчики</th><td class="confluenceTd"></td></tr><tr><th class="confluenceTh">QA (контроль качества)</th><td class="confluenceTd"></td></tr></tbody></table></div></div><h2 id="id-Валидацияданных(Списокпроверок)-Цели">Цели</h2><ul><li>Автоматизировать список проверок при заведении новой продукции</li><li>Поддержка корректного ассортимента </li></ul><h2 id="id-Валидацияданных(Списокпроверок)-Asit">As it</h2><ol><li>В Excel file есть связь &quot;*Назначение (основное)&quot;→ &quot;*Тип товара&quot;</li><li>Торговая марка = текстовое поле</li><li class="m_3430466108207375994MsoListParagraph"><span lang="UK">Автоматично присвоюються такі дані:</span></li><li class="m_3430466108207375994MsoListParagraph"><span lang="UK">Категорія/категорії всіх рівнів (за сукупністю даних в пунктах 1-5). Крім товарів, для яких потрібно додатково вибрати категорію всіх рівнів, такі типи товарів виділені жовтим</span></li><li class="m_3430466108207375994MsoListParagraph"><span lang="UK">Область применения Тетра через тип товару.<span> </span></span>К<span lang="UK">рім товарів, для яких це визначає постачальник (такі товари виділені жовтим)</span></li><li class="m_3430466108207375994MsoListParagraph"><span lang="UK">Область применения<span> </span></span><span>NAV</span><span lang="UK"><span> </span>через тип товару</span></li><li class="m_3430466108207375994MsoListParagraph"><span lang="UK">Лінія на укр.мові<span> </span></span>для<span> </span><span lang="UK">існуючих ліній (англ версію вибирає зі списку постачальник)</span></li><li class="m_3430466108207375994MsoListParagraph"><span lang="UK">Країна похождення (для існуючих брендів)</span></li><li class="m_3430466108207375994MsoListParagraph"><span lang="UK">Виробник (для існуючих брендів)</span></li><li class="m_3430466108207375994MsoListParagraph"><span lang="UK">Ознака імпортного товару (для існуючих брендів)</span></li><li class="m_3430466108207375994MsoListParagraph"><span lang="UK">Назва товару для<span> </span></span><span>PimCore</span></li></ol><h2 id="id-Валидацияданных(Списокпроверок)-Предположения">Предположения</h2><ul><li></li></ul><h2 id="id-Валидацияданных(Списокпроверок)-Tobe">To be </h2><ol><li>Настроить связь справочников &quot;*Назначение (основное)&quot;→ &quot;*Тип товара&quot; в PIM Core</li><li>Сделать поле торговая марка выпадающим списком из существующих брендов. В слючае нового бренда добавить в выпадающий список значению New brand. При его выборе заполнить новый столбец рядом</li><li>Добавить значения в поле &quot;*Пол&quot; = for boys; for girls, ...</li><li>Стандартизировать поле объем(сделать выпадающий список с поиском)</li></ol><h2 id="id-Валидацияданных(Списокпроверок)-Требования">Требования</h2><div class="table-wrap"><table class="confluenceTable"><colgroup><col/><col/><col/><col/><col/></colgroup><tbody><tr><th class="numberingColumn confluenceTh">#</th><th class="confluenceTh">Заголовок</th><th class="confluenceTh">User Story</th><th class="confluenceTh">Важность</th><th class="confluenceTh">Примечания</th></tr><tr><td class="numberingColumn confluenceTd">1</td><td class="confluenceTd"></td><td class="confluenceTd"></td><td class="confluenceTd"></td><td class="confluenceTd"><ul><li></li></ul></td></tr><tr><td class="numberingColumn confluenceTd">2</td><td class="confluenceTd">16 часов</td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td></tr></tbody></table></div><h2 id="id-Валидацияданных(Списокпроверок)-Взаимодействиеспользователемидизайн">Взаимодействие с пользователем и дизайн</h2><p></p><h2 id="id-Валидацияданных(Списокпроверок)-Вопросы">Вопросы</h2><p>Список вопросов, возникших в результате ознакомления с данным документом требований:</p><div class="table-wrap"><table class="confluenceTable"><tbody><tr><th class="confluenceTh">Вопрос</th><th class="confluenceTh">Результат</th></tr><tr><td class="confluenceTd"></td><td class="confluenceTd"></td></tr></tbody></table></div><h2 id="id-Валидацияданных(Списокпроверок)-Чтоненужноделать">Что не нужно делать</h2><ul><li></li></ul>
+                    </div>
+
+                                        
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 04, 2024 11:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

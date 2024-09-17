@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brocard : 2022-02-09 - Minutes (Номенклатурный номер, код Тетра, структуры таблиц)</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Brocard</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Discovery-phase_78839987.html">Discovery phase</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Meetings_79593740.html">Meetings</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Brocard : 2022-02-09 - Minutes (Номенклатурный номер, код Тетра, структуры таблиц)
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Olga Tarasenko</span>, last modified on Jul 06, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="id-20220209Minutes(Номенклатурныйномер,кодТетра,структурытаблиц)-Дата"><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1722771346279 {padding: 0px;}
+div.rbtoc1722771346279 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1722771346279 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1722771346279'>
+<ul class='toc-indentation'>
+<li><a href='#id-20220209Minutes(Номенклатурныйномер,кодТетра,структурытаблиц)-Дата'>Дата</a></li>
+<li><a href='#id-20220209Minutes(Номенклатурныйномер,кодТетра,структурытаблиц)-Участники'>Участники</a></li>
+<li><a href='#id-20220209Minutes(Номенклатурныйномер,кодТетра,структурытаблиц)-Цель'>Цель</a></li>
+<li><a href='#id-20220209Minutes(Номенклатурныйномер,кодТетра,структурытаблиц)-Номенклатурныйномер'>Номенклатурный номер</a></li>
+<li><a href='#id-20220209Minutes(Номенклатурныйномер,кодТетра,структурытаблиц)-КодТетра'>Код Тетра</a></li>
+<li><a href='#id-20220209Minutes(Номенклатурныйномер,кодТетра,структурытаблиц)-Структурытаблицдляинтеграциисостарымисистемами'>Структуры таблиц для интеграции со старыми системами</a></li>
+</ul>
+</div>Дата</h2><p><time datetime="2022-02-09" class="date-past">09 Feb 2022</time></p><h2 id="id-20220209Minutes(Номенклатурныйномер,кодТетра,структурытаблиц)-Участники">Участники</h2><ul><li><p><a class="confluence-userlink user-mention" data-username="y.rudenok@nodeart.io" href="https://wiki.nodeart.app/display/~y.rudenok@nodeart.io" data-linked-resource-id="33915157" data-linked-resource-version="2" data-linked-resource-type="userinfo" data-base-url="https://wiki.nodeart.app">Yaroslav Rudenok</a></p></li><li><p><a href="mailto:o.tarasenko@nodeart.io" class="external-link" style="text-decoration: none;" rel="nofollow">o.tarasenko@nodeart.io</a></p></li><li>Олег Дергач</li><li>Вячеслав Васянович</li></ul><h2 id="id-20220209Minutes(Номенклатурныйномер,кодТетра,структурытаблиц)-Цель">Цель</h2><ul><li><span style="color: rgb(60,64,67);">Для чего нужен номенклатурный номер в ETR, Tetra</span></li><li><span style="color: rgb(60,64,67);">Выяснить логику создания кода Тетры</span></li><li><span style="color: rgb(60,64,67);">Уточнить структуры таблиц для интеграции со старыми системами</span></li></ul><h2 id="id-20220209Minutes(Номенклатурныйномер,кодТетра,структурытаблиц)-Номенклатурныйномер"><span style="color: rgb(60,64,67);">Номенклатурный номер</span></h2><ul><li><p><span style="color: rgb(60,64,67);">Номенклатурный номер это атрибут товара, который является идентификатором товара в 1С</span></p></li><li><span style="color: rgb(60,64,67);">Номенклатурный номер уникальное и обязательное значение</span></li><li><span style="color: rgb(60,64,67);">Правила формирования произвольные с применением порядкового номера</span></li></ul><h2 id="id-20220209Minutes(Номенклатурныйномер,кодТетра,структурытаблиц)-КодТетра"><span style="color: rgb(60,64,67);">Код Тетра</span></h2><ul><li><span style="color: rgb(60,64,67);">Код Тетры создается в ЕТР, потом он передается в Тетра Office</span></li><li><span style="color: rgb(60,64,67);">Имеет формат integer, начинается с 300000, код (диапазон) зависит от узла, для товарной номенклатуры текущие кода это 650000+</span></li><li><span style="color: rgb(60,64,67);">В Тетре осталось несколько узлов, где могут формироваться объекты -  БУ, Gexagone, Центральный маркетинг и ЕТР</span></li></ul><h2 id="id-20220209Minutes(Номенклатурныйномер,кодТетра,структурытаблиц)-Структурытаблицдляинтеграциисостарымисистемами"><span style="color: rgb(60,64,67);">Структуры таблиц для интеграции со старыми системами</span></h2><ul><li>ЕТР работает как набор веб-сервисов</li><li>Передача данных  из ЕТР в Тетру:<ul><li>В ЕТР нажимаем отправить - ЕТР формирует *xml - он архивируется - скачивается на ПК пользователя, который нажал отправить - разархивируется на ПК - файл отправляется в Тетру через plug in ЕТР</li></ul></li><li>Передача данных  из Тетра Office в Тетра WMS:<ul><li>Тетра Office отправляет информацию о товарных движениях в *xml - она попадает в буфер WMS - формирует объекты в Тетра WMS</li></ul></li></ul>
+                    </div>
+
+                                        
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 04, 2024 11:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

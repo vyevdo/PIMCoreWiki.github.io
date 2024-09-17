@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brocard : 2022-02-03 - Minutes (Валидация данных поставщика - товароведы)</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Brocard</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Discovery-phase_78839987.html">Discovery phase</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Meetings_79593740.html">Meetings</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Brocard : 2022-02-03 - Minutes (Валидация данных поставщика - товароведы)
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Olga Tarasenko</span>, last modified on Feb 03, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="id-20220203Minutes(Валидацияданныхпоставщикатовароведы)-Дата"><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1722771346247 {padding: 0px;}
+div.rbtoc1722771346247 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1722771346247 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1722771346247'>
+<ul class='toc-indentation'>
+<li><a href='#id-20220203Minutes(Валидацияданныхпоставщикатовароведы)-Дата'>Дата</a></li>
+<li><a href='#id-20220203Minutes(Валидацияданныхпоставщикатовароведы)-Участники'>Участники</a></li>
+<li><a href='#id-20220203Minutes(Валидацияданныхпоставщикатовароведы)-Цель'>Цель</a></li>
+<li><a href='#id-20220203Minutes(Валидацияданныхпоставщикатовароведы)-Результатывстречи'>Результаты встречи</a></li>
+<li><a href='#id-20220203Minutes(Валидацияданныхпоставщикатовароведы)-Правилаоттовароведов'>Правила от товароведов</a></li>
+<li><a href='#id-20220203Minutes(Валидацияданныхпоставщикатовароведы)-Вопросы'>Вопросы</a></li>
+</ul>
+</div>Дата</h2><p><time datetime="2022-02-03" class="date-past">03 Feb 2022</time></p><h2 id="id-20220203Minutes(Валидацияданныхпоставщикатовароведы)-Участники">Участники</h2><ul><li><p><a class="confluence-userlink user-mention" data-username="y.rudenok@nodeart.io" href="https://wiki.nodeart.app/display/~y.rudenok@nodeart.io" data-linked-resource-id="33915157" data-linked-resource-version="2" data-linked-resource-type="userinfo" data-base-url="https://wiki.nodeart.app">Yaroslav Rudenok</a></p></li><li><p><a style="text-decoration: none;" class="external-link" href="mailto:o.tarasenko@nodeart.io" rel="nofollow">o.tarasenko@nodeart.io</a></p></li><li>Наталья Колисник</li><li>Вячеслав Васянович</li></ul><h2 id="id-20220203Minutes(Валидацияданныхпоставщикатовароведы)-Цель">Цель</h2><ul><li>Разобрать валидацию данных поставщика и документ &quot;защита от дурака&quot;</li></ul><h2 id="id-20220203Minutes(Валидацияданныхпоставщикатовароведы)-Результатывстречи">Результаты встречи</h2><ul><li>На встрече подробно рассмотрели файл с правилами для поставщика и <span>PIMCore (во вложении)</span></li><li>В зависимости от типа товара присваиваются атрибуты (есть обязательные и не обязательные)</li><li>В Excel файле, который рассматривался на встрече, цветами отмечены правила по ключевым атрибутам<ul><li><span>Зелена заливка = обов’язковий атрибут. Без присвоєння постачальник не може закрити заявку</span></li><li><span>Жовта = атрибут може бути прив’язаний. Постачальник може вибрати значення</span></li><li><span>Червона = атрибут не може бути присвоєний цій позиції</span></li></ul></li><li><span>Поставщик заполняет заявку в Excel согласно установленных правил для номенклатуры и потом импортирует ее в PIMCore. В случае, если обязательные поля не заполнены или заполнены неверно, PIMCore выдаст ошибку</span></li><li><span>В PIMCore есть уведомления/всплывающие окна о типе ошибки (пока только для грубых ошибок) на рус/укр языке, в будущем планируется сделать всплывающие подсказки и для других ошибок</span></li><li><span>В Excel форме учтено одно правило, а именно, при выборе Назначения в колонке Тип товара в выпадающем списке будет список соответствующий конкретному назначению</span></li><li><span>В Excel форме нет выпадающего списка по брендам (ТМ), т.к. этот список постоянно обновляется, поле текстовое. Это поле не импортируется в PIMCore</span></li><li><span>Новый бренд (ТМ) для начала дожен быть заведен в PIMCore товароведами, к нему привязывается следующие атрибуты, которые предоставляет поставщик:</span><ul><li><span>класс ТМ</span></li><li><span>владелец ТМ</span></li><li><span>страна происхождения</span></li></ul></li><li><span>После импорта данных поставщиком из формы товароведы обновляют в PIMCore информацию по ТМ</span></li><li><span>В PIMCore к типу товара привязано назначение, в форме Excel наоборот</span></li><li><span>Категорий в форме Excel нет. В PIMCore категория (несколько уровней через &quot;/&quot;) будет присваиваться автоматически в зависимости от связки тип товара+назначение+пол+признак аптечного бренда. В зависимости от типа товара категорий может быть несколько</span></li><li><span>Область применения для Тетры привязана к типу товара. В PIMCore есть типы товаров, у которых привязана область применения для Тетры и проставляется автоматически, а есть те, где ее должен проставить поставщик и если он этого не сделает, PIMCore выдаст ошибку. Также есть ситуация, когда указанная поставщиком область применения не соответсвует той, которуя автоматом подтянул PIMCore, в таком случае нужно рассматривать этот кейс отдельно и уточнять, какую область применения отображать</span></li><li><span>Область применения для Navision проставляется автоматически в зависимости от типа товара. Можно учесть в форме Excel, чтоб область применения для Navision подтягивало формулой в зависимости от выбранной области применения Тетра</span></li><li><span>В PIMCore при импорте данные по товару заходят по ключу Название для PIMCore (Название товара на укр.языке + штрих-код ( через дефис ))</span></li></ul><p><span> </span></p><h2 id="id-20220203Minutes(Валидацияданныхпоставщикатовароведы)-Правилаоттовароведов"><span>Правила от товароведов</span></h2><p><span>Для заведення номенклатури в Pim Core послідовність має бути такою:</span></p><ol><li><span>Бренд</span></li><li><span>Стать</span></li><li><span>Призначення (наприклад, якщо це нішевий бренд, то можна вибрати тільки призначення </span><span>Niche</span><span>, якщо це дитячі товари (пол Д), випадає тільки </span><span>Health</span><span>&amp;</span><span>Beauty</span><span>) - <strong>сделать во второй этап разработки правил в PIMCore</strong></span></li><li><span>Відповідно до призначення </span>з<span>і списку типів товарів цього призначення вибираємо потрібний тип товару</span></li><li><span>Вибираємо для товарів область призначення (тільки для товарів, яким не присвоюється така область автоматично). Див.лист ОП если присваивает поставщик</span></li><li><span>Відповідно до типу товара заповнюємо атрибути</span></li><li><span>Автоматично присвоюються такі дані:</span></li></ol><ol><li style="list-style-type: none;"><ol><li><span>Категорія/категорії всіх рівнів (за сукупністю даних в пунктах 1-5). Крім товарів, для яких потрібно додатково вибрати категорію всіх рівнів, такі типи товарів виділені жовтим</span></li><li><span>Область применения Тетра через тип товару. </span>К<span>рім товарів, для яких це визначає постачальник (такі товари виділені жовтим)</span></li><li><span>Область применения </span><span>NAV</span><span> через тип товару</span></li><li><span>Лінія на укр.мові </span>для<span> </span><span>існуючих ліній (англ версію вибирає зі списку постачальник)</span></li><li><span>Країна похождення (для існуючих брендів)</span></li><li><span>Виробник (для існуючих брендів)</span></li><li><span>Ознака імпортного товару (для існуючих брендів)</span></li><li><span>Назва товару для </span><span>PimCore</span></li></ol></li></ol><h2 id="id-20220203Minutes(Валидацияданныхпоставщикатовароведы)-Вопросы"><span>Вопросы</span></h2><ul><li><span>проверить, достаточно ли привязки атрибутов к типу товара или нужно привязывать к связке тип товара + назначение</span></li><li><span>вынести отдельно в файле правила по присвоению категорий и атрибутов</span></li><li><span>получить новый шаблон-заявку для поставщика</span></li></ul>
+                    </div>
+
+                                                            <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/82575398/82575411.xlsx">301121  Привязки по типу товара общий_new.xlsx</a> (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 04, 2024 11:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

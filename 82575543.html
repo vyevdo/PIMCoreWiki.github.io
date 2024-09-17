@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brocard : Работа с рекламной продукцией</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Brocard</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Discovery-phase_78839987.html">Discovery phase</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="82575438.html">Бизнес процессы, что необходимо изменить при отключении ETR, Tetra office brocard</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Brocard : Работа с рекламной продукцией
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Yaroslav Rudenok</span>, last modified on Feb 08, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <div class='plugin-tabmeta-details'><div class="table-wrap"><table class="confluenceTable"><colgroup><col/><col/></colgroup><tbody><tr><th class="confluenceTh">Целевая версия</th><td class="confluenceTd">1.0</td></tr><tr><th class="confluenceTh">Epic</th><td class="confluenceTd"></td></tr><tr><th class="confluenceTh">Статус документа</th><td class="confluenceTd"><span class="status-macro aui-lozenge">ЧЕРНОВИК</span></td></tr><tr><th class="confluenceTh">Владелец документа</th><td class="confluenceTd"><p><a class="confluence-userlink user-mention" data-username="y.rudenok@nodeart.io" href="https://wiki.nodeart.app/display/~y.rudenok@nodeart.io" data-linked-resource-id="33915157" data-linked-resource-version="2" data-linked-resource-type="userinfo" data-base-url="https://wiki.nodeart.app">Yaroslav Rudenok</a></p></td></tr><tr><th class="confluenceTh">Аналитик</th><td class="confluenceTd"><a class="confluence-userlink user-mention" data-username="y.rudenok@nodeart.io" href="https://wiki.nodeart.app/display/~y.rudenok@nodeart.io" data-linked-resource-id="33915157" data-linked-resource-version="2" data-linked-resource-type="userinfo" data-base-url="https://wiki.nodeart.app">Yaroslav Rudenok</a> </td></tr><tr><th class="confluenceTh">Разработчики</th><td class="confluenceTd"></td></tr><tr><th class="confluenceTh">QA (контроль качества)</th><td class="confluenceTd"></td></tr></tbody></table></div></div><h2 id="id-Работасрекламнойпродукцией-Цели">Цели</h2><ul><li></li></ul><h2 id="id-Работасрекламнойпродукцией-Asit">As it</h2><ul style=""><li>Реклама заводится в PIMCore, ЕТР, Navision</li><li>Для рекламы есть отдельный шаблон для загрузки в Navision. Данные для него берутся из заявки поставщика, часть проставляется вручную. Шаблон содержит такие поля:<ul><li>Поля, которые есть в заявке поставщика:<ul><li>ШК</li><li>ТМ</li><li>Линия</li><li>Товарная группа (тип товара)</li><li>Артикул</li><li>Код ВЭД</li><li>Объем</li><li>Цвет варианта</li><li>Base unit</li><li>Название - поле, которое загружается в Navision в отличии от названия, которое Navision формирует самостоятельно по маске для других типов товаров. В будущем для рекламы логика будет такая же, как и для других типов товаров</li></ul></li><li>Поля, которые добавляет товаровед:<ul><li>Код товара (код Тетры)</li><li>Назначение -  всегда Promotional products</li></ul></li></ul></li></ul><p style="">Для иерархии 7 - это реклама, 1 - это товар</p><ul style=""><li style="list-style-type: none;"><ul><li style="list-style-type: none;"><ul><li>Уровень иерархии 1</li><li>Уровень иерархии 2</li><li>Уровень иерархии 3</li><li>Уровень иерархии 4</li><li>два поля с ценой - по умолчанию 0 и 1 соответственно</li></ul></li></ul></li></ul><h2 id="id-Работасрекламнойпродукцией-Предположения">Предположения</h2><ul><li></li></ul><h2 id="id-Работасрекламнойпродукцией-Tobe">To be</h2><p>Настроить прямую выгрузку данных  о рекламе в Navision</p><h2 id="id-Работасрекламнойпродукцией-Требования">Требования</h2><div class="table-wrap"><table class="confluenceTable"><colgroup><col/><col/><col/><col/><col/></colgroup><tbody><tr><th class="numberingColumn confluenceTh">#</th><th class="confluenceTh">Заголовок</th><th class="confluenceTh">User Story</th><th class="confluenceTh">Важность</th><th class="confluenceTh">Примечания</th></tr><tr><td class="numberingColumn confluenceTd">1</td><td class="confluenceTd"></td><td class="confluenceTd"></td><td class="confluenceTd"></td><td class="confluenceTd"><ul><li></li></ul></td></tr><tr><td class="numberingColumn confluenceTd">2</td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td></tr></tbody></table></div><h2 id="id-Работасрекламнойпродукцией-Взаимодействиеспользователемидизайн">Взаимодействие с пользователем и дизайн</h2><p></p><h2 id="id-Работасрекламнойпродукцией-Вопросы">Вопросы</h2><p>Список вопросов, возникших в результате ознакомления с данным документом требований:</p><div class="table-wrap"><table class="confluenceTable"><tbody><tr><th class="confluenceTh">Вопрос</th><th class="confluenceTh">Результат</th></tr><tr><td class="confluenceTd"></td><td class="confluenceTd"></td></tr></tbody></table></div><h2 id="id-Работасрекламнойпродукцией-Чтоненужноделать">Что не нужно делать</h2><ul><li></li></ul>
+                    </div>
+
+                                        
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 04, 2024 11:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

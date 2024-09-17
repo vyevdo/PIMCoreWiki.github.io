@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brocard : Инструкция по работе с атрибутами-отношениями</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Brocard</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="12910795.html">Техническое задание</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="18350118.html">Инструкции</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Brocard : Инструкция по работе с атрибутами-отношениями
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Roman Ilienko</span> on Mar 21, 2021
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="id-Инструкцияпоработесатрибутамиотношениями-Работасотношениямивнутриобъекта.">Работа с отношениями внутри объекта.</h2><p>Существуют специальные поля внутри объекта, которые отличаются от привычных текстовых или номерных. Их можно опознать по характерному выделению в таблицы (Рис. 1).<br/><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="98" src="attachments/54099971/54099973.png" data-image-src="attachments/54099971/54099973.png" data-unresolved-comment-count="0" data-linked-resource-id="54099973" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-3-21_22-47-33.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="54099971" data-linked-resource-container-version="1"></span></p><p>Рис. 1 - поле &quot;пола&quot;.</p><p>Эта таблица состоит из выбранных столбцов и может меняться внутри класса, в котором она используется (в нашем случае внутри класса продукта). Пример можно увидеть ниже (Рис.2, Рис. 3).</p><p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/54099971/54099975.png" data-image-src="attachments/54099971/54099975.png" data-unresolved-comment-count="0" data-linked-resource-id="54099975" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-3-21_22-55-18.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="54099971" data-linked-resource-container-version="1"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/54099971/54099976.png" data-image-src="attachments/54099971/54099976.png" data-unresolved-comment-count="0" data-linked-resource-id="54099976" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-3-21_22-55-35.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="54099971" data-linked-resource-container-version="1"></span></p><p>Рис. 2 - разрешен только класс пола. Рис. 3 - выводить столбцы с номером и именем.<br/><br/>Значения в таблице выступают в роли ссылки на другой объект с нужными параметрами. В примере выше мы используем пол из доступных объектов нужного класса (Рис. 4)<br/><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="120" src="attachments/54099971/54099974.png" data-image-src="attachments/54099971/54099974.png" data-unresolved-comment-count="0" data-linked-resource-id="54099974" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-3-21_22-51-13.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="54099971" data-linked-resource-container-version="1"></span></p><p>Рис. 4 - доступные значения.</p><p>Чтобы поменять свойства внутри отношений, надо открыть нужный объект путём нажатия на иконку &quot;директории&quot; (Рис. 5).</p><p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="96" src="attachments/54099971/54099977.png" data-image-src="attachments/54099971/54099977.png" data-unresolved-comment-count="0" data-linked-resource-id="54099977" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-3-21_23-1-5.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="54099971" data-linked-resource-container-version="1"></span></p><p>Рис. 5 - открытие объекта через ссылку</p><p>Далее он редактируется как привычный объект (Рис. 6).</p><p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/54099971/54099978.png" data-image-src="attachments/54099971/54099978.png" data-unresolved-comment-count="0" data-linked-resource-id="54099978" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-3-21_23-3-21.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="54099971" data-linked-resource-container-version="1"></span></p><p>Рис. 6 - редактирование данных</p><p>После редактирования данных они удаляются со всех зависимых объектов и надо вводить заново (Рис. 7)</p><p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="70" src="attachments/54099971/54099979.png" data-image-src="attachments/54099971/54099979.png" data-unresolved-comment-count="0" data-linked-resource-id="54099979" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-3-21_23-6-34.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="54099971" data-linked-resource-container-version="1"></span></p><p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="400" src="attachments/54099971/54099980.png" data-image-src="attachments/54099971/54099980.png" data-unresolved-comment-count="0" data-linked-resource-id="54099980" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-3-21_23-7-26.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="54099971" data-linked-resource-container-version="1"></span></p><p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="97" src="attachments/54099971/54099981.png" data-image-src="attachments/54099971/54099981.png" data-unresolved-comment-count="0" data-linked-resource-id="54099981" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-3-21_23-8-3.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="54099971" data-linked-resource-container-version="1"></span></p><p>Рис. 7 - процесс ввода атрибута-отношения.</p><h2 id="id-Инструкцияпоработесатрибутамиотношениями-Импортcsv">Импорт csv</h2><p>Для импорта достаточно ввести в соответсвующем поле файла имя на любом из доступных языков (Рис. 8).</p><p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-thumbnail" height="94" src="attachments/54099971/54099982.png" data-image-src="attachments/54099971/54099982.png" data-unresolved-comment-count="0" data-linked-resource-id="54099982" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-3-21_23-11-49.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="54099971" data-linked-resource-container-version="1"></span></p><p>Рис. 8 - мультиязычный импорт</p><p><br/></p>
+                    </div>
+
+                                                            <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/54099971/54099972.png">image2021-3-21_22-46-8.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/54099971/54099973.png">image2021-3-21_22-47-33.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/54099971/54099974.png">image2021-3-21_22-51-13.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/54099971/54099975.png">image2021-3-21_22-55-18.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/54099971/54099976.png">image2021-3-21_22-55-35.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/54099971/54099977.png">image2021-3-21_23-1-5.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/54099971/54099978.png">image2021-3-21_23-3-21.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/54099971/54099979.png">image2021-3-21_23-6-34.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/54099971/54099980.png">image2021-3-21_23-7-26.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/54099971/54099981.png">image2021-3-21_23-8-3.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/54099971/54099982.png">image2021-3-21_23-11-49.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 04, 2024 11:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

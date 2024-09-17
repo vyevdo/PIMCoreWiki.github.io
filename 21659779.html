@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brocard : Настройка доступных атрибутов и их значений</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Brocard</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="12910795.html">Техническое задание</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="21659677.html">Требования черновик</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Brocard : Настройка доступных атрибутов и их значений
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Valeriy Kulyk</span> on Aug 28, 2019
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p><span style="color: rgb(0,0,0);">Предложение: реализация через Сustom Layouts.</span></p><p><span style="color: rgb(0,0,0);">Пример: </span></p><p><span style="color: rgb(0,0,0);"><span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-external-resource" height="260" width="291" src="https://lh5.googleusercontent.com/q8mBAD5xabg6S46N2MQAyBxo2c0WJFy_F6r8ZRFu0uJFqfJ6vPKbWtnzr5zDujJB3BOgLmjOKkqDAIeEIfF9sdmq_XFl1yv5ortJ-AZF9rMoAShkO1GNcgWF4v59nh8mBxCGC0bk" data-image-src="https://lh5.googleusercontent.com/q8mBAD5xabg6S46N2MQAyBxo2c0WJFy_F6r8ZRFu0uJFqfJ6vPKbWtnzr5zDujJB3BOgLmjOKkqDAIeEIfF9sdmq_XFl1yv5ortJ-AZF9rMoAShkO1GNcgWF4v59nh8mBxCGC0bk"></span></span></span></p><p><span style="color: rgb(0,0,0);">Возьмем существующую структуру класса Product - 8 вкладок.</span></p><p><span style="color: rgb(0,0,0);"><span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-external-resource" height="388" width="527" src="https://lh4.googleusercontent.com/8i7dDF_ojU10zKhr7o9LSRBYj4eRcHhAU_ppUnLnuso4Pkgn0IvwsXkNEU_qjnbg0Lrod6iEaNJUVWDwzk3WE7Gu_2alJT8hJeF8k8niIcY3R8-gKC-VQo7cb9eGClq0y-eAXVId" data-image-src="https://lh4.googleusercontent.com/8i7dDF_ojU10zKhr7o9LSRBYj4eRcHhAU_ppUnLnuso4Pkgn0IvwsXkNEU_qjnbg0Lrod6iEaNJUVWDwzk3WE7Gu_2alJT8hJeF8k8niIcY3R8-gKC-VQo7cb9eGClq0y-eAXVId"></span></span></span></p><p><span style="color: rgb(0,0,0);">Список значений поля “product_type” - “Тип товара” (в примере будут использованы только значения “activator” и “base”)</span></p><p><span style="color: rgb(0,0,0);"><span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-external-resource" height="179" width="526" src="https://lh4.googleusercontent.com/jJnRZ3s-k8K74YaR7mpuSVOjyJ5_Nwmbj3m3GXgA6pqjE0Av0ieUEckfkp9uaUM8xfCB6dAB89VHb-rg7tlcAqw_c5GbN8rdk5aC4leazAdx79HEqDgnh335dJNCfXh7trOxZAH2" data-image-src="https://lh4.googleusercontent.com/jJnRZ3s-k8K74YaR7mpuSVOjyJ5_Nwmbj3m3GXgA6pqjE0Av0ieUEckfkp9uaUM8xfCB6dAB89VHb-rg7tlcAqw_c5GbN8rdk5aC4leazAdx79HEqDgnh335dJNCfXh7trOxZAH2"></span></span></span></p><p><span style="color: rgb(0,0,0);">Список значений поля “purpose_main” - “Назначение (основное)”</span></p><p><span style="color: rgb(0,0,0);">Предположим, что у нас есть 2 задачи:</span></p><ol><li style="list-style-type: decimal;"><p><span>Для товаров типа “activator” убрать вкладку “Content” и убрать поле “purpose_additional” из вкладки “Characteristics”</span></p></li><li style="list-style-type: decimal;"><p><span>Для товаров типа “base” в поле “purpose_main” оставить только варианты “MakeUp” и “Untype”</span></p></li></ol><p><span><span><br/></span></span></p><p><span style="color: rgb(0,0,0);">Задача 1</span></p><ol><li style="list-style-type: decimal;"><p><span>В настройках класса “products” создаем Custom Layout для типа товара “activator”, с помощью описания (или, возможно, другого поля) указываем название типа товара</span><span><span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-external-resource" height="205" width="624" src="https://lh6.googleusercontent.com/mP41sIYQJ5z0fXHFRaOt4sOtQeDlS4RmyWAzuqTUGwoxq3fI4YOVUkc_xAodeH_u2O9VIol8NV8PgGXgY0OJsXOvG15BOUxEoDFZ6rRHP5zzUBInNBlHCd6Nxoeopq7roHE5It5d" data-image-src="https://lh6.googleusercontent.com/mP41sIYQJ5z0fXHFRaOt4sOtQeDlS4RmyWAzuqTUGwoxq3fI4YOVUkc_xAodeH_u2O9VIol8NV8PgGXgY0OJsXOvG15BOUxEoDFZ6rRHP5zzUBInNBlHCd6Nxoeopq7roHE5It5d"></span></span></span></p></li><li style="list-style-type: decimal;"><p><span>С окошка “Сlass” перетягиваем весь Layout, и потом через ПКМ - Delete удаляем ненужные нам вкладки и поля</span><span><span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-external-resource" height="567" width="565" src="https://lh3.googleusercontent.com/n7j0EdK-deZmR-AbSLo3BW-3GierwELpqrXva613gXzbVxiYr4CczwzLDhXGn2XriU71UBooCPXEALVEisbh2aZ_Ot78burS_05STM-w3MxFJ-_8vAc_M2sSaBhCDekmc0ElRb59" data-image-src="https://lh3.googleusercontent.com/n7j0EdK-deZmR-AbSLo3BW-3GierwELpqrXva613gXzbVxiYr4CczwzLDhXGn2XriU71UBooCPXEALVEisbh2aZ_Ot78burS_05STM-w3MxFJ-_8vAc_M2sSaBhCDekmc0ElRb59"></span></span></span></p></li></ol><p><span><span><br/></span></span></p><p><span style="color: rgb(0,0,0);">Задача 2</span></p><ol><li style="list-style-type: decimal;"><p><span>В настройках класса “products” создаем Custom Layout для типа товара “activator”, с помощью описания (или, возможно, другого поля) указываем название типа товара</span><span><span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-external-resource" height="188" width="624" src="https://lh5.googleusercontent.com/KaHLk_fKVC5w5D1L-7Cd0_ndcxhpwH6PVIbcjd1jhavSf-EsJ2ewXvqC8VpVmlDNdoSHDwsXyx9987P-oyJUx1k-5LkbEIlrXbbBTl6_KmphFkWBKK3cVQLl_k5yT7cU7SiulTfj" data-image-src="https://lh5.googleusercontent.com/KaHLk_fKVC5w5D1L-7Cd0_ndcxhpwH6PVIbcjd1jhavSf-EsJ2ewXvqC8VpVmlDNdoSHDwsXyx9987P-oyJUx1k-5LkbEIlrXbbBTl6_KmphFkWBKK3cVQLl_k5yT7cU7SiulTfj"></span></span></span></p></li><li style="list-style-type: decimal;"><p><span>С окошка “Сlass” перетягиваем весь Layout, и потом заходим в настройки поля “Назначение (основное)”, где в разделе Selection Options удаляем ненужные нам варианты</span><span><span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-external-resource" height="305" width="624" src="https://lh3.googleusercontent.com/hzPedM_UJkJWuJWnwDN41awzAcl1Dc91Vq5NfR3f4pZjlEAiPF5f5dlm1QcoalOms8INA8Q40El0NFhjbLoCKEOdUMOMLWapaCIIEpLQxPRzEchFb4A_LuBlwTslpal1Gf3RinBx" data-image-src="https://lh3.googleusercontent.com/hzPedM_UJkJWuJWnwDN41awzAcl1Dc91Vq5NfR3f4pZjlEAiPF5f5dlm1QcoalOms8INA8Q40El0NFhjbLoCKEOdUMOMLWapaCIIEpLQxPRzEchFb4A_LuBlwTslpal1Gf3RinBx"></span></span></span></p></li></ol><p><span><span><br/></span></span></p><p><br/></p><p><span style="color: rgb(0,0,0);">Вопрос 3 - Настройка выбора доступных объектов для отношений 1 к 1, 1 к многим и тп</span></p><p><span style="color: rgb(0,0,0);">Предложение: настройка через атрибуты объекта.</span></p><p><span style="color: rgb(0,0,0);">Пример: Допустим, что для выбора цвета в объектах класса “Product” мы создали класс “Сolor”. Нам нужно указать, что цвет “Морская волна #009688” доступен только для типов товара “activator” и “base”.</span></p><ol><li style="list-style-type: decimal;"><p><span>Создаем класс “Сolor” с атрибутом множественного выбора (мультиселект) “Доступные типы товара”, набор значений дублируем из типов товара в классе “Product”</span><span><span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-external-resource" height="332" width="624" src="https://lh6.googleusercontent.com/Vni21gZhrJ8vjpbit3gcp_BIfiRGDlpYp280Enzd3RppdewdYsMYZ-5uOXSoi8AjnqkHt-Q0SNqHrQwT0srH3oFNm9UreduHmHsm_3FbfAS3UPumgTUsnR-GNPa9rM4NKTyRIE6a" data-image-src="https://lh6.googleusercontent.com/Vni21gZhrJ8vjpbit3gcp_BIfiRGDlpYp280Enzd3RppdewdYsMYZ-5uOXSoi8AjnqkHt-Q0SNqHrQwT0srH3oFNm9UreduHmHsm_3FbfAS3UPumgTUsnR-GNPa9rM4NKTyRIE6a"></span></span></span></p></li></ol><p><span><span style="color: rgb(0,0,0);">Создаем цвет “Морская волна #009688” и указываем возможные варианты типов товара в поле “Доступные типы товара”</span><span style="color: rgb(0,0,0);"><span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-external-resource" height="292" width="624" src="https://lh3.googleusercontent.com/Z1ERD0wPhs_97Bax2YI_XkAMiKkeEVrJ_FkhQ1Y66SXtmkgVCnxkJ_nXZkJILWhdrKXdrJT4BKCpME_PP9BbcN1H5KwOx7olw_Vl03bEWGDg_xlHZ6qtlv62xHffV5GE-GumVjPB" data-image-src="https://lh3.googleusercontent.com/Z1ERD0wPhs_97Bax2YI_XkAMiKkeEVrJ_FkhQ1Y66SXtmkgVCnxkJ_nXZkJILWhdrKXdrJT4BKCpME_PP9BbcN1H5KwOx7olw_Vl03bEWGDg_xlHZ6qtlv62xHffV5GE-GumVjPB"></span></span></span></span></p>
+                    </div>
+
+                                        
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 04, 2024 11:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

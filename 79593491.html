@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brocard : Работа товароведов по ведению ассортимента товаров</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Brocard</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Discovery-phase_78839987.html">Discovery phase</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Brocard : Работа товароведов по ведению ассортимента товаров
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Yaroslav Rudenok</span>, last modified by <span class='editor'> Olga Tarasenko</span> on Jan 27, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <ol><li>В PIM core поставщик загружает excel file с новыми позициями либо он может создать позицию в PIM core вручную на платформе PIM core. Список полей в файле &quot;Поля по всім програмам.xlsx&quot;(69 полей)</li><li>В ETR нужно указать &quot;Номенклатурный номер&quot;. В каждой марке есть номенклатурный номер. Товаровед смотрит какой последний номер, и заполняет это поле с новыми номерами</li><li>В номенклатурном номере должно быть не более 10 символов(требований по формированию номеров нет). Как правило он формируется: Сокращенная марка &amp; Порядковый номер</li><li>Перечень номенклатурных номеров хранится только в ETR</li><li>Номенклатурный номер добавляется в excel файл, что загружается в ETR</li><li>Код тетры ETR присваивает автоматически при заведении товара</li><li>Информация с ETR в Tetra приходит автоматически.</li><li>В Tetra нужно добавить поле &quot;Область применения&quot;. Она загружается через Excel файл</li><li>Код УКТЗЕД так же загружается, но его нужно добавлять по другому</li><li>Код УКТЗЕД добавляется в Tetra через Excel файл по шаблону, а с Tetra мигрирует в ETR </li><li>Код УКТЗЕД присылает поставщик в PIM core, но в ETR его загрузить нельзя</li><li>Код Tetra попадает в PIM Core как то автоматически</li><li>Есть сообщения об ошибках при передачи кода Tetra в PIM Core</li><li>Колонка &quot;Vendor Item No&quot; = код Tetra для объединения вариантов (группировке штрих-кодов) в одну карточку товара </li><li>Колонка &quot;GoodID Tetra&quot; = уникальный код Tetra</li><li>В Brocard.ua данные попадают с Navision</li><li>В Letu.ua тоже передается заявка с 69 атрибутами товара</li><li>Список полей, что передаются на <a href="http://Brocard.ua" class="external-link" rel="nofollow">Brocard.ua</a> есть в файле &quot;Поля по всім програмам.xlsx&quot;</li><li>В Экспорт с PIM core по штрих - коду подтягиваем код Tetra и формируем файл (вкладка НАВ &quot;(імпорт осн.атриб)&quot;)</li><li>При импорте в Navision добавляются поля с вкладка НАВ &quot;(імпорт осн.атриб)&quot;. Остальные поля загружаются доп. файлами.(Структура файла: штрих - код, дополнительный атрибут)</li></ol><p><br/></p><p>Вопросы к товароведам:</p><ol><li>Все ли поля обязательные для заполнения при подгрузке файла в PIM Core? - готовится файл &quot;Защита от дурака&quot;</li><li>Номенклатурные номера у различных марок могут повторяться? - Нет, не могут</li><li>Спросить у Олега как данные мигрируют с ETR в Tetra </li><li>Увидеть файл загрузки в ETR (с учетом номенклатурного номера) - Да</li><li>Увидеть файл выгрузки с ETR  не нужен, нужен только с Тетры</li><li>Увидеть файл загрузки в Tetra с учетом поля &quot;Область применения&quot; _ Да</li><li>Как добавить код УКТЗЕД? - проговорили</li><li>Как код Tetra мигрирует в ETR?</li><li>Обсудить поля, что есть в файле от Олега и заводятся в Tetra</li><li>Как код Tetra попадает в PIM Core?</li><li>Есть штрих - код, а есть штрих - код варианта. Как вы работает с вариантами в PIM core, ETR, Tetra(штрих - код будет же один). Штрих код варианта - это штрих код существующей позиции, если например поменялся объем фасовки</li><li>Файлы, что импортируют дополнительные атрибуты - вышлют</li><li>Если на один и тот же штрих-код будут разные атрибуты при импорте в Navision. Такая ситуация может быть? - Штрих-код уникальный</li><li>Как вы редактируете текущий ассортимент? - вручную, по позиционно</li><li>Удаляете ли вы позиции с ассортимента? - меняем статусы. В Navision архивные, новые</li><li>Работа с Letu.ua (Кристина Кислова) Удалось пообщаться и уточнить детали?  - Нужно проговорить отдельно</li><li>Процесс заведения наборов в ассортимент. В раскладке PIM core есть поле &quot;Состав набора&quot;</li></ol><p>Требование к разработчикам</p><ol><li>Проработать логику добавление кода УКТЗЕД с PIM Core в Navision</li></ol><p><br/></p><p>Файлы во вложении</p><ol><li>Файл для поставщика (заявка)</li><li>Выгрузка из PIMCore</li><li>Импорт в Тетра с атрибутом Область применения</li><li>Экспорт файла из Тетра</li><li>Файл с сертификацией (который подгружается в Тетру)</li><li>Базовый импорт в Navision</li><li>Файл со списком атрибутов, которые отличаются в PIMCore и Тетра (для примера, тип товара, область применения)</li><li>Список дополнительных атрибутов, которые мы подгружаем в Navision</li><li>Перечень справочников из Navision, которые нужно поддерживать</li><li>Выгрузка всех данных из Navision (все атрибуты) (основной экспорт и экспорт дополнительных атрибутов частями)</li><li>Файл импорта набора в Navision</li><li>Файл импорта рекламы в Navision</li><li>Список дополнительных атрибутов для наборов и рекламы</li><li>Заявка поставщика на набор</li><li>Импорт кодов ВЭД в ЕТР и Тетру</li></ol>
+                    </div>
+
+                                                            <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/79593790.xlsx">11. Файл импорта набора в Navision.xlsx</a> (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/79593791.xlsx">10. Выгрузка всех данных из Navision (все атрибуты) (основной экспорт и экспорт дополнительных атрибутов частями).xlsx</a> (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/79593792.xlsx">9. Перечень справочников из Navision, которые нужно поддерживать.xlsx</a> (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/79593793.xlsx">8. Список дополнительных атрибутов, которые мы подгружаем в Navision.xlsx</a> (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/79593794.xlsx">7. Файл со списком атрибутов, которые отличаются в PIMCore и Тетра.xlsx</a> (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/79593795.xlsx">6. Базовый импорт в Navision.xlsx</a> (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/79593796.xlsx">2. Выгрузка из PIMCore.xlsx</a> (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/79593797.xltm">1. Файл для поставщика (заявка).xltm</a> (application/vnd.ms-excel.template.macroEnabled.12)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/79593798.xlsx">14. Заявка поставщика на набор.xlsx</a> (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/79593799.xlsx">13. Список дополнительных атрибутов для наборов и рекламы.xlsx</a> (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/79593800.xlsx">12. Файл импорта рекламы в Navision.xlsx</a> (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/79593971.xls">Область применения 25.01.22.xls</a> (application/vnd.ms-excel)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/79593972.xls">Коды Вэд 25.01.22.xls</a> (application/vnd.ms-excel)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/79593973.xls">Экспорт файла из Тетра.xls</a> (application/vnd.ms-excel)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/79593996.xls">20 10 диор.xls</a> (application/vnd.ms-excel)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/81788983.xls">5. 20 10 диор.xls</a> (application/vnd.ms-excel)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/81788984.xls">4. Экспорт файла из Тетра.xls</a> (application/vnd.ms-excel)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/81788985.xls">3. Область применения 25.01.22.xls</a> (application/vnd.ms-excel)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/79593491/81788987.xls">15. Коды Вэд 25.01.22.xls</a> (application/vnd.ms-excel)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 04, 2024 11:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

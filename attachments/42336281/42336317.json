@@ -1,0 +1,541 @@
+{
+  "path": "\/",
+  "creationDate": 1573742705,
+  "modificationDate": 1579586716,
+  "userModification": 2,
+  "childs": null,
+  "elements": [
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [
+        {
+          "type": "object",
+          "id": 20275
+        }
+      ],
+      "name": "product_type",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [
+        {
+          "type": "object",
+          "id": 20009
+        }
+      ],
+      "name": "trademark",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [
+        {
+          "type": "object",
+          "id": 21230
+        }
+      ],
+      "name": "trademark_class",
+      "language": null
+    },
+    {
+      "type": "input",
+      "value": "1234567890",
+      "name": "barcode",
+      "language": null
+    },
+    {
+      "type": "input",
+      "value": "ANT1111",
+      "name": "article_no",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [
+        {
+          "type": "object",
+          "id": 21242
+        }
+      ],
+      "name": "purpose_main",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [
+        {
+          "type": "object",
+          "id": 20627
+        }
+      ],
+      "name": "usage_area",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [
+        {
+          "type": "object",
+          "id": 20820
+        }
+      ],
+      "name": "usage_area_tetra",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [
+        {
+          "type": "object",
+          "id": 21359
+        }
+      ],
+      "name": "category",
+      "language": null
+    },
+    {
+      "type": "input",
+      "value": "Smooth Skin Natural",
+      "name": "product_line",
+      "language": null
+    },
+    {
+      "type": "input",
+      "value": "\u0421\u043c\u0443\u0437 \u0421\u043a\u0456\u043d \u041d\u0435\u0439\u0447\u0443\u0440\u0430\u043b",
+      "name": "product_line_ua",
+      "language": null
+    },
+    {
+      "type": "input",
+      "value": "Pure Shave",
+      "name": "product_family",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [
+        {
+          "type": "object",
+          "id": 21246
+        }
+      ],
+      "name": "gender",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [
+        {
+          "type": "object",
+          "id": 21221
+        }
+      ],
+      "name": "units",
+      "language": null
+    },
+    {
+      "type": "input",
+      "value": "50",
+      "name": "qty",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [
+        {
+          "type": "object",
+          "id": 19437
+        }
+      ],
+      "name": "additional_property",
+      "language": null
+    },
+    {
+      "type": "localizedfields",
+      "value": [
+        {
+          "type": "input",
+          "value": "After Shave Cream Smooth Skin Natural",
+          "name": "product_name_system",
+          "language": "en"
+        },
+        {
+          "type": "calculatedValue",
+          "value": "Antonio Banderas Smooth Skin Natural after shave balm for men for razor",
+          "name": "product_name_system_auto",
+          "language": "en"
+        },
+        {
+          "type": "input",
+          "value": "After Shave Cream Smooth Skin Natural",
+          "name": "product_name",
+          "language": "en"
+        },
+        {
+          "type": "calculatedValue",
+          "value": "Antonio Banderas Smooth Skin Natural after shave balm for men for razor",
+          "name": "product_name_auto",
+          "language": "en"
+        }
+      ],
+      "name": "localizedfields",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [],
+      "name": "odor_family",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [],
+      "name": "odor_type",
+      "language": null
+    },
+    {
+      "type": "input",
+      "value": null,
+      "name": "notes",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [],
+      "name": "spf",
+      "language": null
+    },
+    {
+      "type": "input",
+      "value": null,
+      "name": "tone_number",
+      "language": null
+    },
+    {
+      "type": "input",
+      "value": null,
+      "name": "tone_name",
+      "language": null
+    },
+    {
+      "type": "rgbaColor",
+      "value": null,
+      "name": "rgb",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [],
+      "name": "effect",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [],
+      "name": "surface",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [],
+      "name": "skin_type",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [],
+      "name": "hair_type",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [],
+      "name": "age",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [],
+      "name": "action",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [],
+      "name": "ingredients",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [],
+      "name": "features",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [],
+      "name": "texture",
+      "language": null
+    },
+    {
+      "type": "checkbox",
+      "value": true,
+      "name": "limited",
+      "language": null
+    },
+    {
+      "type": "checkbox",
+      "value": true,
+      "name": "niche",
+      "language": null
+    },
+    {
+      "type": "checkbox",
+      "value": true,
+      "name": "exclusive",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [
+        {
+          "type": "object",
+          "id": 20111
+        }
+      ],
+      "name": "trademark_owner",
+      "language": null
+    },
+    {
+      "type": "manyToManyObjectRelation",
+      "value": [
+        {
+          "type": "object",
+          "id": 19538
+        }
+      ],
+      "name": "country",
+      "language": null
+    },
+    {
+      "type": "input",
+      "value": "\u0422\u041e\u0412 \u0022\u0428\u0435\u0439\u0432 \u041f\u0440\u043e\u0434\u0430\u043a\u0442\u0441\u0022",
+      "name": "supplier",
+      "language": null
+    },
+    {
+      "type": "input",
+      "value": "Beardyface Factory #1",
+      "name": "factory",
+      "language": null
+    },
+    {
+      "type": "numeric",
+      "value": 36,
+      "name": "expiry_time",
+      "language": null
+    },
+    {
+      "type": "numeric",
+      "value": 200,
+      "name": "base_price",
+      "language": null
+    },
+    {
+      "type": "calculatedValue",
+      "value": 40,
+      "name": "fee",
+      "language": null
+    },
+    {
+      "type": "calculatedValue",
+      "value": 240,
+      "name": "fee_price",
+      "language": null
+    },
+    {
+      "type": "numeric",
+      "value": 400,
+      "name": "recommended_price",
+      "language": null
+    },
+    {
+      "type": "calculatedValue",
+      "value": 1.6666666666666667,
+      "name": "commercial_conditions",
+      "language": null
+    },
+    {
+      "type": "input",
+      "value": null,
+      "name": "type_approval_no",
+      "language": null
+    },
+    {
+      "type": "date",
+      "value": "",
+      "name": "type_approval_expiry",
+      "language": null
+    },
+    {
+      "type": "input",
+      "value": "657654764764",
+      "name": "hygiene_approval_no",
+      "language": null
+    },
+    {
+      "type": "date",
+      "value": "2019-11-03",
+      "name": "hygiene_approval_start",
+      "language": null
+    },
+    {
+      "type": "date",
+      "value": "2019-11-29",
+      "name": "hygiene_approval_end",
+      "language": null
+    },
+    {
+      "type": "numeric",
+      "value": 250,
+      "name": "length",
+      "language": null
+    },
+    {
+      "type": "numeric",
+      "value": 50,
+      "name": "width",
+      "language": null
+    },
+    {
+      "type": "numeric",
+      "value": 50,
+      "name": "height",
+      "language": null
+    },
+    {
+      "type": "numeric",
+      "value": 200,
+      "name": "weight",
+      "language": null
+    },
+    {
+      "type": "numeric",
+      "value": 1,
+      "name": "min_qty",
+      "language": null
+    },
+    {
+      "type": "checkbox",
+      "value": true,
+      "name": "imported",
+      "language": null
+    },
+    {
+      "type": "input",
+      "value": "675875657658",
+      "name": "ved",
+      "language": null
+    },
+    {
+      "type": "textarea",
+      "value": null,
+      "name": "set_contents",
+      "language": null
+    },
+    {
+      "type": "calculatedValue",
+      "value": null,
+      "name": "code_tetra",
+      "language": null
+    },
+    {
+      "type": "textarea",
+      "value": "\u0421\u0443\u043f\u0435\u0440 \u0431\u0430\u043b\u044c\u0437\u0430\u043c \u043f\u043e\u0441\u043b\u0435 \u0431\u0440\u0438\u0442\u044c\u044f!",
+      "name": "description_ru",
+      "language": null
+    },
+    {
+      "type": "textarea",
+      "value": "\u0421\u0443\u043f\u0435\u0440 \u0431\u0430\u043b\u044c\u0437\u0430\u043c \u043f\u0456\u0441\u043b\u044f \u0431\u0440\u0438\u0442\u0442\u044f!",
+      "name": "description_ua",
+      "language": null
+    },
+    {
+      "type": "textarea",
+      "value": "\u041d\u0430\u043d\u0435\u0441\u0442\u0438 \u043d\u0430 \u043b\u0438\u0446\u043e \u043f\u043e\u0441\u043b\u0435 \u0431\u0440\u0438\u0442\u044c\u044f.",
+      "name": "usage_ru",
+      "language": null
+    },
+    {
+      "type": "textarea",
+      "value": "\u041d\u0430\u043d\u0435\u0441\u0442\u0438 \u043d\u0430 \u043b\u0438\u0446\u0435 \u043f\u0456\u0441\u043b\u044f \u0431\u0440\u0438\u0442\u0442\u044f.",
+      "name": "usage_ua",
+      "language": null
+    },
+    {
+      "type": "image",
+      "value": 15,
+      "name": "photo_product",
+      "language": null
+    },
+    {
+      "type": "image",
+      "value": 15,
+      "name": "photo_product_with_wrapper",
+      "language": null
+    },
+    {
+      "type": "image",
+      "value": 15,
+      "name": "photo_wrapper",
+      "language": null
+    },
+    {
+      "type": "image",
+      "value": 15,
+      "name": "photo_product_open",
+      "language": null
+    },
+    {
+      "type": "image",
+      "value": 15,
+      "name": "photo_tint",
+      "language": null
+    },
+    {
+      "type": "input",
+      "value": "56",
+      "name": "property_count",
+      "language": null
+    },
+    {
+      "type": "input",
+      "value": "53",
+      "name": "property_fill",
+      "language": null
+    },
+    {
+      "type": "input",
+      "value": "94.642857142857",
+      "name": "property_fill_percentage",
+      "language": null
+    },
+    {
+      "type": "select",
+      "value": "in_progress",
+      "name": "status",
+      "language": null
+    }
+  ],
+  "className": "product",
+  "parentId": 21495,
+  "key": "API",
+  "published": true,
+  "type": "object",
+  "userOwner": 11,
+  "properties": null,
+  "notes": null,
+  "index": null
+}

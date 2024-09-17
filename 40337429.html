@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brocard : Користувачі та ролі</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Brocard</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="12910795.html">Техническое задание</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="18350118.html">Инструкции</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Brocard : Користувачі та ролі
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Illia Fedorovych</span>, last modified on Jul 02, 2020
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1722771329146 {padding: 0px;}
+div.rbtoc1722771329146 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1722771329146 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1722771329146'>
+<ul class='toc-indentation'>
+<li><a href='#id-Користувачітаролі-Загальні'>Загальні</a></li>
+<li><a href='#id-Користувачітаролі-Дозволи'>Дозволи</a></li>
+<li><a href='#id-Користувачітаролі-Системнідозволи'>Системні дозволи</a></li>
+<li><a href='#id-Користувачітаролі-Елементидозволу-робочіпростори'>Елементи дозволу - робочі простори</a></li>
+</ul>
+</div></p><h1 id="id-Користувачітаролі-Загальні">Загальні</h1><p>Дозволи користувача в Pimcore засновані на концепції користувачів та ролей. Кожен користувач може мати декілька ролей, і користувачі і ролі - можуть мати власні дозволи.</p><p>Користувачі та ролі налаштовуються в адмін інтерфейсі Pimcore за допомогою <em>Налаштування</em>&gt; <em>Користувачі та ролі</em>&gt; <em>Користувачі</em> (<em>Settings</em> &gt; <em>Users &amp; Roles</em> &gt; <em>Users</em>) та <em>Налаштування</em>&gt; <em>Користувачі та ролі</em>&gt; <em>Ролі</em> (<em>Settings</em> &gt; <em>Users &amp; Roles</em> &gt; <em>Roles</em>).</p><h1 id="id-Користувачітаролі-Дозволи">Дозволи</h1><blockquote><p>Примітка: термін &quot;активи&quot; використано в контексті assets - зображення, відео та інші файли.</p></blockquote><p>У Pimcore є два рівні дозволів користувача: дозволи на системні компоненти та дозволи на елементи даних (активи, об'єкти та документи). Дозволи можуть надаватися ролям або окремим користувачам. У наступних розділах описано, як і де можна встановити дозволи та як вони впливатимуть чи не впливатимуть один на одного.</p><p>Не обов'язково використовувати ролі, дозволи можуть надаватися користувачам безпосередньо. Однак радимо використовувати ролі, якщо існує більша група користувачів, якою можна керувати. На вкладці налаштування користувача / ролей можна визначити, які дозволи надаються цьому користувачеві або ролі. Окремий користувач має кілька більш загальних налаштувань, ніж роль.</p><h1 id="id-Користувачітаролі-Системнідозволи">Системні дозволи</h1><ul><li>Адміністратор - якщо встановлено прапорець, всі права доступу до всіх компонентів системи надаються цьому користувачеві</li><li>Показати екран привітання при запуску</li><li>Показати попередження про закриття</li><li>Ролі - Виберіть усі ролі, включені користувачем</li><li>Перспективи - які <a href="https://pimcore.com/docs/6.x/Development_Documentation/Tools_and_Features/Perspectives.html" class="external-link" rel="nofollow">перспективи</a> доступні для цього користувача</li></ul><p>У наступному списку видно, що означають різні системні дозволи (доступні для користувачів та ролей):</p><ul><li><strong>Активи (Assets)</strong>: видно дерево активів</li><li><strong>Резервне копіювання (Backup)</strong>: видимість функцій резервного копіювання</li><li><strong>Поштова скринька для повернення (Bounce Mail Inbox)</strong>: видно поштові скриньки для <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%89%D1%91%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%BE" class="external-link" rel="nofollow">повернених листів</a></li><li><strong>Класи (Classes)</strong>: видимий редактор класів об’єктів (користувач може створювати та змінювати об’єктні класи)</li><li><strong>Очистити кеш (Clear Cache)</strong>: визначає, чи може користувач очистити кеш Pimcore (внутрішній кеш і кеш відповідей, якщо він налаштований)</li><li><strong>Очистити тимчасові файли (Clear Temporary Files)</strong>: визначає, чи може користувач видаляти тимчасові системні файли (наприклад, ескізи)</li><li><strong>Інформаційні панелі (Dashboards)</strong>: Користувач може створювати інформаційні панелі (дашборди)</li><li><strong>Документи (Documents)</strong>: видно дерево документів</li><li><strong>Типи документів (Document Types)</strong>: Користувач може створювати та змінювати попередньо визначені типи документів</li><li><strong>Електронна пошта (Emails)</strong>: користувач бачить історію електронної пошти</li><li><strong>Глосарій (Glossary)</strong>: видимі записи словника</li><li><strong>Помилки HTTP (HTTP Errors)</strong>: Помилки HTTP видно</li><li><strong>Примітки та події (Notes &amp; Events)</strong>: Примітки та події видно</li><li><strong>Об'єкти (Objects)</strong>: дерево об’єктів видно</li><li><strong>Плагіни (Plugins)</strong>: визначає, чи дозволено користувачу завантажувати встановлення та керувати розширенням</li><li><strong>Заздалегідь задані властивості (Predefined Properties)</strong>: Користувач може створювати та змінювати попередньо визначені властивості</li><li><strong>QR-коди (QR-Codes)</strong>: Користувач може створювати та змінювати QR-коди</li><li><strong>Кошик (Recycle Bin)</strong>: Користувач має доступ до кошика (смітника)</li><li><strong>Перенаправлення (Redirects)</strong>: Користувач може створювати та змінювати переадресації</li><li><strong>Звіти (Reports)</strong>: Користувач має доступ до модуля звітів</li><li><strong>Попередній перегляд документів (Seemode)</strong>: Попередній перегляд документів доступний / недоступний для користувача</li><li><strong>SEO-редактор документів (SEO Document Editor)</strong>: Користувач має доступ до редактора документів SEO</li><li><strong>Налаштування системи (System Settings)</strong>: Користувач має доступ до системних налаштувань</li><li><strong>Управління тегами та фрагментами (Tag &amp; Snippet Management)</strong>: Користувач може створювати та змінювати записи в управлінні тегами та фрагментами</li><li><strong>Націлювання (Targeting)</strong>: Користувач має доступ до модуля націлювання</li><li><strong>Ескізи (Thumbnails)</strong>: Користувач може створювати та змінювати конфігурації мініатюр</li><li><strong>Переклади веб-сайту (Website Translations)</strong>: визначає, чи може користувач переглядати та редагувати переклади веб-сайту</li><li><strong>Користувачі (Users)</strong>: визначає, чи може користувач керувати налаштуваннями та дозволами інших користувачів</li><li><strong>Налаштування веб-сайту (Website Settings)</strong>: Користувач може створювати та змінювати налаштування веб-сайту</li></ul><p>Користувачеві буде надано будь-який системний дозвіл, який наданий безпосередньо їм або ролі, яку він включає. Дозвіл, наданий ролі, не може бути скасований для окремого користувача, який має цю роль. Тому не має значення, чи вимкнений дозвіл у налаштуваннях індивідуальних дозволів користувача, якщо надається дозвіл через роль.</p><h1 id="id-Користувачітаролі-Елементидозволу-робочіпростори">Елементи дозволу - робочі простори</h1><p>Крім дозволів, зазначених вище, доступ користувача може бути обмежений на основі елементів. Це можна зробити, визначивши робочі простори для користувача або ролі. Якщо користувач має загальний доступ до всіх документів, можливо уточнити, що користувач / роль може робити або не робити з кожним документом або робочим простором. Те саме стосується об’єктів та активів. Ці параметри маніпулюються на вкладці &quot;Робочі простори&quot; (Workspaces) користувача / ролі.</p><p>Користувачеві потрібно надати доступ до одного або декількох робочих просторів. Користувач не може отримати доступ до будь-яких ресурсів за межами своєї робочої області.</p><p>Однак є кілька загальних правил щодо дозволів елементів, які необхідно враховувати: <em> якщо користувач не має права отримати список елементів (list), інші дозволи ігноруються </em> якщо користувач не має дозволу на список для елемента, усі дозволи для дітей цього елемента ігноруються</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" alt="User permission workspaces" src="https://pimcore.com/docs/6.x/Development_Documentation/img/permissions1.png" data-image-src="https://pimcore.com/docs/6.x/Development_Documentation/img/permissions1.png"></span></p><p>Дозволи користувача на основі елементів підсумовуються наступним чином:</p><ul><li><strong>список (list)</strong>: елемент може бути вказаний у дереві</li><li><strong>переглянути (view)</strong>: елемент можна відкрити</li><li><strong>зберегти (save)</strong>: елемент можна зберегти (кнопка збереження видима)</li><li><strong>опублікувати (publish)</strong>: елемент можна опублікувати (кнопка публікації видно)</li><li><strong>скасувати публікацію (unpublish)</strong>: елемент може бути неопублікований (кнопка скасування публікації видно); не існує для активів</li><li><strong>створити (create)</strong>: можна створити нові дочірні елементи (не існує для активів)</li><li><strong>видалити (delete)</strong>: елемент можна видалити</li><li><strong>перейменувати (rename)</strong>: назву елемента можна змінити</li><li><strong>налаштування (settings)</strong>: налаштуваннями елемента можна керувати, тобто видно вкладку налаштувань; шлях елементу входить до налаштувань, тому також дається дозвіл переміщати елемент у дереві</li><li><strong>версії (versions)</strong>: доступна вкладка версій</li><li><strong>властивості (properties)</strong>: вкладка властивостей доступна і ними можна керувати</li></ul><p><br/></p><p>Окремому користувачеві надається доступ до всіх визначених робочих просторів всіх ролей, в які вони входять. Крім цього, користувачі можуть мати власні робочі простори. Вони додаються до дозволів, наданих ролями.</p><p>Наприклад, ролі <code>myRole</code> надано доступ список і переглядати (list, view) до <code>/home/myPath</code>. Користувач включає в себе роль <code>myRole</code> і тим самим успадковує всі параметри робочої області від ролі. Якщо у користувача є власні налаштування робочої області для <code>/home/myPath</code>, ці дозволи додаються до дозволів з ролей, в яку він входить. Дозвіл, наданий роллю, не може бути скасовано для окремого користувача.</p><p>Також можливо обмежити доступ до локалізованих полів на рівні мови. За замовчуванням користувач може переглядати та редагувати (доки вони мають достатні дозволи на об'єкт) усі локалізовані поля. Тепер це може бути обмежено набором мов.</p><p>Доступ до панелі конфігурації здійснюється у стовпці &quot;Спеціальні налаштування&quot; (Special Settings). Це ж діалогове вікно також дозволяє вказати доступні спеціальні макети (custom layout) для користувача.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/40337429/40337430.png" data-image-src="attachments/40337429/40337430.png" data-unresolved-comment-count="0" data-linked-resource-id="40337430" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="permissions2.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="40337429" data-linked-resource-container-version="3"></span></p>
+                    </div>
+
+                                                            <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/40337429/40337430.png">permissions2.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 04, 2024 11:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

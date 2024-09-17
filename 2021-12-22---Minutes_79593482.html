@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brocard : 2021-12-22 - Minutes</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Brocard</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Discovery-phase_78839987.html">Discovery phase</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Meetings_79593740.html">Meetings</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Brocard : 2021-12-22 - Minutes
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Olga Tarasenko</span>, last modified on Dec 27, 2021
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="id-20211222Minutes-Дата"><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1722771341387 {padding: 0px;}
+div.rbtoc1722771341387 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1722771341387 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1722771341387'>
+<ul class='toc-indentation'>
+<li><a href='#id-20211222Minutes-Дата'>Дата</a></li>
+<li><a href='#id-20211222Minutes-Участники'>Участники</a></li>
+<li><a href='#id-20211222Minutes-Цель'>Цель</a></li>
+<li><a href='#id-20211222Minutes-БлоксК.Марикуца'>Блок с К. Марикуца</a></li>
+<li><a href='#id-20211222Minutes-БлоксО.Дергач,обсуждениефайлаНоменклатура'>Блок с О. Дергач, обсуждение файла Номенклатура</a></li>
+<li><a href='#id-20211222Minutes-Вопросы:'>Вопросы:</a></li>
+</ul>
+</div>Дата</h2><p><time datetime="2021-12-22" class="date-past">22 Dec 2021</time></p><h2 id="id-20211222Minutes-Участники">Участники</h2><ul><li><p><a class="confluence-userlink user-mention" data-username="y.rudenok@nodeart.io" href="https://wiki.nodeart.app/display/~y.rudenok@nodeart.io" data-linked-resource-id="33915157" data-linked-resource-version="2" data-linked-resource-type="userinfo" data-base-url="https://wiki.nodeart.app">Yaroslav Rudenok</a></p></li><li><p><a style="text-decoration: none;" class="external-link" href="mailto:o.tarasenko@nodeart.io" rel="nofollow">o.tarasenko@nodeart.io</a></p></li><li>Константин Марикуца</li><li>Олег Дергач</li><li>Вячеслав Васянович</li></ul><h2 id="id-20211222Minutes-Цель">Цель</h2><ul><li>Обсудить движение товаров и их данных по системам</li><li>Обсудить списки и атрибуты систем</li></ul><h2 id="id-20211222Minutes-БлоксК.Марикуца"><strong>Блок с К. Марикуца</strong></h2><ol><li><span>Из ЕТР информация передается в Тетра Офис БУ и Тетра Офис HX</span></li><li><span>Все товары попадают в Navision из Тетра</span></li><li><span>Из Тетра выгружается Excel файл, обрабатывается и далее импортируется в Navision через Excel файл определенного шаблона</span></li><li><span>Данные из PIMCore грузятся сначала в ЕТР, потом в Тетра</span></li><li><span>Все данные, которые на текущий момент системы берут из Тетра, они будут брать из Navision</span></li><li><span>Центральный POS и Центральный маркетинг ликвидируются вместе с Тетра</span></li><li><span>ЕТР - общий интерфейс для загрузки информации по товару и создании справочников, связанных с его заведением</span></li></ol><h2 id="id-20211222Minutes-БлоксО.Дергач,обсуждениефайлаНоменклатура"><strong>Блок с О. Дергач</strong>, обсуждение файла Номенклатура</h2><ol><li><span>Все объекты имеют свой уникальный код и они имеют класс, который описывает параметры этой сущности.</span></li><li><span>В ЕТР общий класс у товаров 3100, а его наследуют такие классы, как товар для продажи, реклама, пробники, т.е. подвиды товара, которые имеют разные бизнес свойства, разные маркетинговые свойства, поэтому они по разному обрабатываются в офисных программах .</span></li><li><span>Торговая марка имеет базовый класс 5210, но тоже имеет два класса - элитная торговая марка и масс-маркет.</span></li><li><span>ЕТР повторяет систему классов товаров Тетра Офис</span></li><li><span>В POS и Маркетинге классификация совсем другая. Часть справочников в них отсутствует (не доходит из систем ЕТР и Тетра Офис)</span></li><li><span>В WMS приходит информация только о товаре, другие справочники отсутствуют и не нужны там.</span></li><li><span>В каждой из систем на разных этапах у товара могут появляться дополнительные атрибуты, например, на складе появляется много физических параметров</span></li><li><span>Цель - собрать полный перечень всех атрибутов товара из разных систем, чтоб понимать полную картину по товару, а также чтоб оценить, нужно ли всю информацию заводить на первоначальном этапе попадания товара в систему, либо же специфические атрибуты могут заводиться в каких-то конкретных системах и атрибут будет появляться уже там. Для примера, важный атрибут Область применения отсутствует в ЕТР, появляется в ТетраОфис и в дальнейшем переходит в Navision. </span><span>Важно - заводить Область применения в самом начале.</span></li><li><span>Важная особенность. Справочник Производитель товара (фабрика) в ТетраОфис реализовано двумя справочниками в ЕТР и это более правильно. Производитель может быть как юр.лицо, зарегистрированное в конкретной стране. А также у него может быть несколько фабрик в разных странах, соответственно у каждой фабрики свой атрибут Страна. В ТетраОфис можно выбрать только одну Страну (сейчас это делается с помощью определенного алгоритма и договоренностей).</span></li></ol><h2 id="id-20211222Minutes-Вопросы:"><span>Вопросы:</span></h2><ul><li><span>нужна ли будет генерация кода Тетра для последующей подгрузки этой информации в WMS</span></li><li><span>какие потребности пользователя есть в ЕТР и нужно ли их реализовывать в PIMCore</span></li><li><span>где поля появляются, что это за атрибуты?</span></li><li><span>to be - где поля, атрибуты будут отображаться, нужны ли они в принципе и нужно ли их хранить в одном месте?</span></li></ul><p><br/></p><p><br/><br/><br/><br/></p>
+                    </div>
+
+                                        
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 04, 2024 11:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

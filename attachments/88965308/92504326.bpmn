@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:collaboration id="Collaboration_0o9i3t5">
+    <bpmn:participant id="Participant_0pw6dn9" name="Цены" processRef="Process_1g29ir7" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1g29ir7" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_1ttefyh">
+      <bpmn:lane id="Lane_0gl2wdv" name="Товаровед">
+        <bpmn:flowNodeRef>Activity_0u3hd5o</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0gs4m7p</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_159vesm" name="Система">
+        <bpmn:flowNodeRef>Event_0svodpm</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_02kpsh4</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_0h1052v" name="Поставщик">
+        <bpmn:flowNodeRef>Event_0tv3uad</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_1buecjj</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Event_0tv3uad">
+      <bpmn:outgoing>Flow_1y42tsf</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Activity_1buecjj" name="Отправляет Excel файл с прайсами товароведам">
+      <bpmn:incoming>Flow_1y42tsf</bpmn:incoming>
+      <bpmn:outgoing>Flow_074ks78</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1y42tsf" sourceRef="Event_0tv3uad" targetRef="Activity_1buecjj" />
+    <bpmn:sequenceFlow id="Flow_0bfn5ys" sourceRef="Activity_0gs4m7p" targetRef="Activity_02kpsh4" />
+    <bpmn:task id="Activity_0u3hd5o" name="Обрабатывает файл и по шаблону в Excel заполняет данные">
+      <bpmn:incoming>Flow_074ks78</bpmn:incoming>
+      <bpmn:outgoing>Flow_0m1h6bi</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_074ks78" sourceRef="Activity_1buecjj" targetRef="Activity_0u3hd5o" />
+    <bpmn:sequenceFlow id="Flow_0m1h6bi" sourceRef="Activity_0u3hd5o" targetRef="Activity_0gs4m7p" />
+    <bpmn:task id="Activity_0gs4m7p" name="Импортирует цены через файл Excel в Тетру">
+      <bpmn:incoming>Flow_0m1h6bi</bpmn:incoming>
+      <bpmn:outgoing>Flow_0bfn5ys</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="Event_0svodpm">
+      <bpmn:incoming>Flow_0a8oc5p</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:task id="Activity_02kpsh4" name="Цены автоматически загружаются в Navision">
+      <bpmn:incoming>Flow_0bfn5ys</bpmn:incoming>
+      <bpmn:outgoing>Flow_0a8oc5p</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0a8oc5p" sourceRef="Activity_02kpsh4" targetRef="Event_0svodpm" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0o9i3t5">
+      <bpmndi:BPMNShape id="Participant_0pw6dn9_di" bpmnElement="Participant_0pw6dn9" isHorizontal="true">
+        <dc:Bounds x="121" y="565" width="759" height="415" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0h1052v_di" bpmnElement="Lane_0h1052v" isHorizontal="true">
+        <dc:Bounds x="151" y="565" width="729" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_159vesm_di" bpmnElement="Lane_159vesm" isHorizontal="true">
+        <dc:Bounds x="151" y="835" width="729" height="145" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0gl2wdv_di" bpmnElement="Lane_0gl2wdv" isHorizontal="true">
+        <dc:Bounds x="151" y="685" width="729" height="150" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0a8oc5p_di" bpmnElement="Flow_0a8oc5p">
+        <di:waypoint x="790" y="915" />
+        <di:waypoint x="822" y="915" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0m1h6bi_di" bpmnElement="Flow_0m1h6bi">
+        <di:waypoint x="470" y="768" />
+        <di:waypoint x="520" y="768" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_074ks78_di" bpmnElement="Flow_074ks78">
+        <di:waypoint x="310" y="670" />
+        <di:waypoint x="310" y="700" />
+        <di:waypoint x="420" y="700" />
+        <di:waypoint x="420" y="720" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0bfn5ys_di" bpmnElement="Flow_0bfn5ys">
+        <di:waypoint x="620" y="768" />
+        <di:waypoint x="655" y="768" />
+        <di:waypoint x="655" y="915" />
+        <di:waypoint x="690" y="915" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1y42tsf_di" bpmnElement="Flow_1y42tsf">
+        <di:waypoint x="228" y="630" />
+        <di:waypoint x="260" y="630" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0tv3uad_di" bpmnElement="Event_0tv3uad">
+        <dc:Bounds x="192" y="612" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1buecjj_di" bpmnElement="Activity_1buecjj">
+        <dc:Bounds x="260" y="590" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0u3hd5o_di" bpmnElement="Activity_0u3hd5o">
+        <dc:Bounds x="370" y="720" width="100" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0gs4m7p_di" bpmnElement="Activity_0gs4m7p">
+        <dc:Bounds x="520" y="728" width="100" height="87" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0svodpm_di" bpmnElement="Event_0svodpm">
+        <dc:Bounds x="822" y="897" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_02kpsh4_di" bpmnElement="Activity_02kpsh4">
+        <dc:Bounds x="690" y="875" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

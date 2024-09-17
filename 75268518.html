@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brocard : Требования к виртуальным машинам (рекомендации, те. чем больше ресурсов, тем лучше)</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Brocard</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="12910795.html">Техническое задание</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="12910767.html">Брокард</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Brocard : Требования к виртуальным машинам (рекомендации, те. чем больше ресурсов, тем лучше)
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Konstantin Nosov</span>, last modified by <span class='editor'> Evhenii Malovitsa</span> on Dec 17, 2021
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <ol><li>Машина TFS remote build agent<ol><li>cpu<ol><li>от 8 до 16 ядер (чем производительнее - тем лучше)</li><li>выделение : статическое (лучше) или динамическое</li></ol></li><li>ram<ol><li>объём: 12 or 16gb</li><li>выделение : статическое</li></ol></li><li>disk<ol><li>тип: SSD NVME (лучше) или SSD SATA 3.0</li><li>объём: от 80G до 480G</li><li>выделение: статическое</li></ol></li><li>net<ol><li>загрузка\выгрузка локально и глобально: от 100Mbps до 10Gbps</li><li>статический адрес: от 1 до 2 белых адресов</li><li>тип доступа: из мира (лучше) или локальной сети, и опционально можно создать сеть приватную сеть между этой VM и registry</li></ol></li><li>os<ol><li>дистрибутив: centos 8 (minimal)</li><li>примечание: swap не нужен (используем zram), kdump можно отключить, xfs, lvm, домашний каталог 2gb, всё остальное дисковое пространство в root (/); нужен будет root доступ</li></ol></li><li>kvm\ipmi\idrac<ol><li>примечание: будет отлично, если будет доступ (не обязательно)</li></ol></li><li>backup<ol><li>необходимость: можно бекапить раз в неделю, или раз в месяц, или раз в квартал (малая стоимость потери)</li></ol></li><li>dns<ol><li>main: 1.1.1.1</li><li>additional 1: 8.8.8.8</li><li>additional 2: 8.8.4.4</li></ol></li></ol></li><li>Машина для feature окружения<ol><li>cpu<ol><li>от 8 до 12 ядер (чем производительнее - тем лучше)</li><li>выделение : статическое (лучше) или динамическое</li></ol></li><li>ram<ol><li>объём: 8gb or 12gb</li><li>выделение : статическое или динамическое</li></ol></li><li>disk<ol><li>объём: от 80G до 120G</li><li>выделение: статическое</li><li>тип: SSD NVME (лучше) или SSD SATA 3.0</li></ol></li><li>net<ol><li>загрузка\выгрузка локально и глобально: от 100Mbps до 10Gbps</li><li>статический адрес: от 1 до 2 белых адресов</li><li>тип доступа: из мира</li></ol></li><li>os<ol><li>дистрибутив: centos 8 (minimal)</li><li>примечание: swap не нужен (используем zram), kdump можно отключить, xfs, lvm, домашний каталог 2gb, всё остальное дисковое пространство в root (/); нужен будет root доступ</li></ol></li><li>kvm\ipmi\idrac<ol><li>примечание: будет отлично, если будет доступ (не обязательно)</li></ol></li><li>backup<ol><li>необходимость: можно бекапить раз в час, или раз в день, или раз в неделю,(средняя стоимость потери)</li></ol></li><li>dns<ol><li>main: 1.1.1.1</li><li>additional 1: 8.8.8.8</li><li>additional 2: 8.8.4.4</li></ol></li></ol></li><li>Машина для container registry (goharbor)<ol><li>cpu<ol><li>4 до 12 ядер (чем производительнее - тем лучше)</li><li>выделение : статическое (лучше) или динамическое</li></ol></li><li>ram<ol><li>объём: 8gb or 12gb</li><li>выделение : статическое</li></ol></li><li>disk<ol><li>объём: от 120G до 480G</li><li>выделение: статическое</li><li>тип: SSD NVME (сильно лучше) или SSD SATA 3.0</li></ol></li><li>net<ol><li>загрузка\выгрузка локально и глобально: от 100Mbps до 10Gbps</li><li>статический адрес: от 1 до 2 белых адресов</li><li>тип доступа: из мира (лучше) или локальной сети, и опционально можно создать сеть приватную сеть между этой VM и TFS remote build agent</li></ol></li><li>os<ol><li>дистрибутив: centos 8 (minimal)</li><li>примечание: swap не нужен (используем zram), kdump можно отключить, xfs, lvm, домашний каталог 2gb, всё остальное дисковое пространство в root (/); нужен будет root доступ</li></ol></li><li>kvm\ipmi\idrac<ol><li>примечание: будет отлично, если будет доступ (не обязательно)</li></ol></li><li> backup<ol><li>необходимость: можно бекапить раз в день, или раз в неделю, или раз в квартал(малая стоимость потери)</li></ol></li><li>dns<ol><li>main: 1.1.1.1</li><li>additional 1: 8.8.8.8</li><li>additional 2: 8.8.4.4</li></ol></li></ol></li></ol><p><br/></p><p><br/></p><p>Пример:</p><ol><li><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/75268518/77987869.png" data-image-src="attachments/75268518/77987869.png" data-unresolved-comment-count="0" data-linked-resource-id="77987869" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-12-17_16-13-30.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="75268518" data-linked-resource-container-version="10"></span></li><li><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/75268518/77987871.png" data-image-src="attachments/75268518/77987871.png" data-unresolved-comment-count="0" data-linked-resource-id="77987871" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-12-17_16-14-30.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="75268518" data-linked-resource-container-version="10"></span></li><li><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/75268518/77987872.png" data-image-src="attachments/75268518/77987872.png" data-unresolved-comment-count="0" data-linked-resource-id="77987872" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-12-17_16-14-59.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="75268518" data-linked-resource-container-version="10"></span></li><li><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/75268518/77987873.png" data-image-src="attachments/75268518/77987873.png" data-unresolved-comment-count="0" data-linked-resource-id="77987873" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-12-17_16-15-14.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="75268518" data-linked-resource-container-version="10"></span></li><li><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/75268518/77987875.png" data-image-src="attachments/75268518/77987875.png" data-unresolved-comment-count="0" data-linked-resource-id="77987875" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-12-17_16-15-53.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="75268518" data-linked-resource-container-version="10"></span></li><li><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/75268518/77987876.png" data-image-src="attachments/75268518/77987876.png" data-unresolved-comment-count="0" data-linked-resource-id="77987876" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-12-17_16-16-14.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="75268518" data-linked-resource-container-version="10"></span></li></ol>
+                    </div>
+
+                                                            <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/75268518/77987869.png">image2021-12-17_16-13-30.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/75268518/77987871.png">image2021-12-17_16-14-30.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/75268518/77987872.png">image2021-12-17_16-14-59.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/75268518/77987873.png">image2021-12-17_16-15-14.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/75268518/77987875.png">image2021-12-17_16-15-53.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/75268518/77987876.png">image2021-12-17_16-16-14.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 04, 2024 11:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

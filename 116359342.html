@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brocard : Идентификатор родителя</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Brocard</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Development_92504895.html">Development</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Brocard : Идентификатор родителя
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Yaroslav Rudenok</span>, last modified on Jun 09, 2023
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h1 id="id-Идентификаторродителя-Словарь">Словарь</h1><div class="table-wrap"><table class="wrapped confluenceTable"><colgroup><col/><col/></colgroup><tbody><tr><th class="confluenceTh">Название</th><th class="confluenceTh">Описание</th></tr><tr><td class="confluenceTd">Товар - родитель</td><td class="confluenceTd">Товар у которого в системе существует товар, в котором поле &quot;Идентификатор родителя&quot; заполнено данным объектом (товаром)</td></tr><tr><td class="confluenceTd">Дочерний товар</td><td class="confluenceTd">Товар, у которого поле &quot;Идентификатор родителя&quot; заполнено</td></tr><tr><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td></tr></tbody></table></div><h1 id="id-Идентификаторродителя-Функциональныетребования">Функциональные требования</h1><h2 id="id-Идентификаторродителя-Приручномвводе:">При ручном вводе:</h2><ol><li>Создание товара<ol><li>Автозаполнение атрибутов нового товара согласно данных  о его родители<br/>При создании нового товара в случае, если поле &quot;Идентификатор родителя&quot; заполнено , то система на новом товаре автоматически должна заполнить некоторые атрибуты, скопировав их с товара, что указан в поле &quot;Идентификатор родителя&quot;. Заполнение происходит после нажатия одной из кнопок на товаре &quot;Save&quot; (Для неопубликованых) или &quot;Save &amp; Publish&quot; (Для опубликованных)<br/>Перечень атрибутов указан в файле <a href="https://bh365office.sharepoint.com/:x:/r/sites/PIMCore/_layouts/15/Doc.aspx?sourcedoc=%7BF77B3B07-47FE-4846-8FF9-2575F086166F%7D&amp;file=%D0%9A%D0%BE%D0%BF%D0%B8%D1%8F%20%D0%9F%D0%BE%D0%BB%D1%8F%20%D0%9D%D0%90%D0%92_PimCore%2002_08.xlsx&amp;action=default&amp;mobileredirect=true&amp;cid=4464bf7d-3208-41b5-a039-259fb90c4a26" class="external-link" rel="nofollow">Копия Поля Нав_PimCore</a>, вкладка &quot;Атрибути товара финал&quot; колонка &quot;Копіювати атрибут з батьківського товару при створені?&quot;. Условие: значение ячейки = &quot;Да&quot;<br/>Если какое -то поле на товаре было заполнено ранее, то приоритетным значением является значение, что указано на родителе. То есть поля перезатрутся</li><li>Если при создании нового товара поле &quot;Идентификатор родителя&quot; не заполнено, то никаких действий по автозаполнению полей с товара родителя делать не нужно</li></ol></li><li>Редактирования данных на товаре <ol><li>Если на товаре -родители меняется значение атрибута ,что указано в файле <a href="https://bh365office.sharepoint.com/:x:/r/sites/PIMCore/_layouts/15/Doc.aspx?sourcedoc=%7BF77B3B07-47FE-4846-8FF9-2575F086166F%7D&amp;file=%D0%9A%D0%BE%D0%BF%D0%B8%D1%8F%20%D0%9F%D0%BE%D0%BB%D1%8F%20%D0%9D%D0%90%D0%92_PimCore%2002_08.xlsx&amp;action=default&amp;mobileredirect=true&amp;cid=4464bf7d-3208-41b5-a039-259fb90c4a26" class="external-link" rel="nofollow">Копия Поля Нав_PimCore</a>, вкладка &quot;Атрибути товара финал&quot; колонка &quot;Копіювати атрибут з батьківського товару при редагуванні?&quot;, Условие: значение ячейки = &quot;Да&quot;, то на всех дочерних товарах даного товара  - родителя (опубликованные и неопубликованные) значение этого атрибута так  же должно поменяться</li><li>На дочернем товаре необходимо запретить изменять атрибуты, что удовлетворяют условию значение ячейки = &quot;Да&quot; в файле <a href="https://bh365office.sharepoint.com/:x:/r/sites/PIMCore/_layouts/15/Doc.aspx?sourcedoc=%7BF77B3B07-47FE-4846-8FF9-2575F086166F%7D&amp;file=%D0%9A%D0%BE%D0%BF%D0%B8%D1%8F%20%D0%9F%D0%BE%D0%BB%D1%8F%20%D0%9D%D0%90%D0%92_PimCore%2002_08.xlsx&amp;action=default&amp;mobileredirect=true&amp;cid=4464bf7d-3208-41b5-a039-259fb90c4a26" class="external-link" rel="nofollow">Копия Поля Нав_PimCore</a>, вкладка &quot;Атрибути товара финал&quot; колонка &quot;Копіювати атрибут з батьківського товару при редагуванні?&quot;. Если пользователь пытается изменить значение данного атрибута, то при попытке сохранить изменения должна отображаться ошибка &quot;Изменения даного атрибута не возможно. Необходимо изменить его на товаре-родителе&quot; &amp; указать штрихкод товара - родителя</li><li>Если поле &quot;Идентификатор родителя&quot; на товаре изменяется, а именно либо ставится другой объект, либо заполняется впервые, то перечень атрибутов заново копируется с указанного товара - родителя</li><li>Если поле &quot;Идентификатор родителя&quot; на товаре изменяется, а именно делается пустым, то никаких изменений не делаем</li></ol></li></ol><h2 id="id-Идентификаторродителя-Приимпорте">При импорте</h2><ol><li>Создание товара<ol><li>Автозаполнение атрибутов нового товара согласно данных  о его родители<br/>При создании нового товара в случае, если поле &quot;Идентификатор родителя&quot; заполнено , то система на новом товаре автоматически должна заполнить некоторые атрибуты, скопировав их с товара, что указан в поле &quot;Идентификатор родителя&quot;. Заполнение происходит при импорте<br/>Перечень атрибутов указан в файле <a href="https://bh365office.sharepoint.com/:x:/r/sites/PIMCore/_layouts/15/Doc.aspx?sourcedoc=%7BF77B3B07-47FE-4846-8FF9-2575F086166F%7D&amp;file=%D0%9A%D0%BE%D0%BF%D0%B8%D1%8F%20%D0%9F%D0%BE%D0%BB%D1%8F%20%D0%9D%D0%90%D0%92_PimCore%2002_08.xlsx&amp;action=default&amp;mobileredirect=true&amp;cid=4464bf7d-3208-41b5-a039-259fb90c4a26" class="external-link" rel="nofollow">Копия Поля Нав_PimCore</a>, вкладка &quot;Атрибути товара финал&quot; колонка &quot;Копіювати атрибут з батьківського товару при створені?&quot;. Условие: значение ячейки = &quot;Да&quot;<br/>Если какое -то поле на товаре было заполнено ранее, то приоритетным значением является значение, что указано на родителе. То есть поля перезатрутся</li><li>Если при создании нового товара поле &quot;Идентификатор родителя&quot; не заполнено, то никаких действий по автозаполнению полей с товара родителя делать не нужно</li><li>Если при создании нового товара поле &quot;Идентификатор родителя&quot; заполнено некорректно ( то есть аткого товара родителя в системе нет), то выдаем критическую ошибку &quot;You filled the wrong product - parent_шв. Please refill the Parent ID and re-upload the file&quot;</li></ol></li><li>Редактирования данных на товаре<ol><li>Если на товаре -родители меняется значение атрибута при загрузке файла,что указано в файле <a href="https://bh365office.sharepoint.com/:x:/r/sites/PIMCore/_layouts/15/Doc.aspx?sourcedoc=%7BF77B3B07-47FE-4846-8FF9-2575F086166F%7D&amp;file=%D0%9A%D0%BE%D0%BF%D0%B8%D1%8F%20%D0%9F%D0%BE%D0%BB%D1%8F%20%D0%9D%D0%90%D0%92_PimCore%2002_08.xlsx&amp;action=default&amp;mobileredirect=true&amp;cid=4464bf7d-3208-41b5-a039-259fb90c4a26" class="external-link" rel="nofollow">Копия Поля Нав_PimCore</a>, вкладка &quot;Атрибути товара финал&quot; колонка &quot;Копіювати атрибут з батьківського товару при редагуванні?&quot;, Условие: значение ячейки = &quot;Да&quot;, то на всех дочерних товарах даного товара - родителя  (опубликованные и неопубликованные) значение этого атрибута так  же должно поменяться</li><li>На дочернем товаре при импорте необходимо запретить изменять атрибуты, что удовлетворяют условию значение ячейки = &quot;Да&quot; в файле <a href="https://bh365office.sharepoint.com/:x:/r/sites/PIMCore/_layouts/15/Doc.aspx?sourcedoc=%7BF77B3B07-47FE-4846-8FF9-2575F086166F%7D&amp;file=%D0%9A%D0%BE%D0%BF%D0%B8%D1%8F%20%D0%9F%D0%BE%D0%BB%D1%8F%20%D0%9D%D0%90%D0%92_PimCore%2002_08.xlsx&amp;action=default&amp;mobileredirect=true&amp;cid=4464bf7d-3208-41b5-a039-259fb90c4a26" class="external-link" rel="nofollow">Копия Поля Нав_PimCore</a>, вкладка &quot;Атрибути товара финал&quot; колонка &quot;Копіювати атрибут з батьківського товару при редагуванні?&quot;. Если в файле импорта значения данного атрибута отличаются от товара - родителя, то при попытке загрузки файла должна отображаться некритическая ошибка &quot;Изменения даного атрибута не возможно. Необходимо изменить его на товаре-родителе&quot; &amp; указать штрихкод товара - родителя. При этом файл загружаем, но значения атрибутов не изменяем</li><li>Если при импорте товаров, что уже существуют в системе поле &quot;Идентификатор родителя&quot; на товаре изменяется, а именно либо ставится другой объект, либо заполняется впервые, то перечень атрибутов заново копируется с указанного товара - родителя</li><li>Если при импорте товаров, что уже существуют в системе поле &quot;Идентификатор родителя&quot; на товаре изменяется, а именно делается пустым, то никаких изменений не делаем</li></ol></li></ol>
+                    </div>
+
+                                        
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 04, 2024 11:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

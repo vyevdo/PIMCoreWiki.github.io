@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:collaboration id="Collaboration_0j077ku">
+    <bpmn:participant id="Participant_01b11h6" processRef="Process_1" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1" isExecutable="false">
+    <bpmn:startEvent id="Event_1kgkbpq">
+      <bpmn:outgoing>Flow_02w4nd9</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Activity_0mmajsr" name="Выгрузить данные с PIM Core в отдел легализации">
+      <bpmn:incoming>Flow_02w4nd9</bpmn:incoming>
+      <bpmn:incoming>Flow_1gvbhxa</bpmn:incoming>
+      <bpmn:outgoing>Flow_0illt7x</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_02w4nd9" sourceRef="Event_1kgkbpq" targetRef="Activity_0mmajsr" />
+    <bpmn:task id="Activity_0cbhsr1" name="Загрузить данные в PIM Core с гигиенического заключения">
+      <bpmn:incoming>Flow_0illt7x</bpmn:incoming>
+      <bpmn:outgoing>Flow_0vwsewq</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0illt7x" sourceRef="Activity_0mmajsr" targetRef="Activity_0cbhsr1" />
+    <bpmn:exclusiveGateway id="Gateway_13ihv3l" name="Срок окончания наступил?">
+      <bpmn:incoming>Flow_0vwsewq</bpmn:incoming>
+      <bpmn:incoming>Flow_05iae8r</bpmn:incoming>
+      <bpmn:outgoing>Flow_0kazhl6</bpmn:outgoing>
+      <bpmn:outgoing>Flow_05iae8r</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_0vwsewq" sourceRef="Activity_0cbhsr1" targetRef="Gateway_13ihv3l" />
+    <bpmn:task id="Activity_0eeioyi" name="уведомить сотрудников">
+      <bpmn:incoming>Flow_0kazhl6</bpmn:incoming>
+      <bpmn:outgoing>Flow_1gvbhxa</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0kazhl6" name="да" sourceRef="Gateway_13ihv3l" targetRef="Activity_0eeioyi" />
+    <bpmn:sequenceFlow id="Flow_1gvbhxa" sourceRef="Activity_0eeioyi" targetRef="Activity_0mmajsr" />
+    <bpmn:sequenceFlow id="Flow_05iae8r" name="нет" sourceRef="Gateway_13ihv3l" targetRef="Gateway_13ihv3l" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0j077ku">
+      <bpmndi:BPMNShape id="Participant_01b11h6_di" bpmnElement="Participant_01b11h6" isHorizontal="true">
+        <dc:Bounds x="-280" y="-120" width="780" height="250" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_02w4nd9_di" bpmnElement="Flow_02w4nd9">
+        <di:waypoint x="-192" y="0" />
+        <di:waypoint x="-140" y="0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0illt7x_di" bpmnElement="Flow_0illt7x">
+        <di:waypoint x="-40" y="0" />
+        <di:waypoint x="20" y="0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0vwsewq_di" bpmnElement="Flow_0vwsewq">
+        <di:waypoint x="120" y="0" />
+        <di:waypoint x="185" y="0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0kazhl6_di" bpmnElement="Flow_0kazhl6">
+        <di:waypoint x="235" y="0" />
+        <di:waypoint x="300" y="0" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="261" y="-18" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1gvbhxa_di" bpmnElement="Flow_1gvbhxa">
+        <di:waypoint x="350" y="40" />
+        <di:waypoint x="350" y="60" />
+        <di:waypoint x="-90" y="60" />
+        <di:waypoint x="-90" y="40" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05iae8r_di" bpmnElement="Flow_05iae8r">
+        <di:waypoint x="210" y="-25" />
+        <di:waypoint x="210" y="-90" />
+        <di:waypoint x="165" y="-90" />
+        <di:waypoint x="165" y="0" />
+        <di:waypoint x="185" y="0" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="179" y="-108" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_1kgkbpq_di" bpmnElement="Event_1kgkbpq">
+        <dc:Bounds x="-228" y="-18" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0mmajsr_di" bpmnElement="Activity_0mmajsr">
+        <dc:Bounds x="-140" y="-40" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0cbhsr1_di" bpmnElement="Activity_0cbhsr1">
+        <dc:Bounds x="20" y="-40" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_13ihv3l_di" bpmnElement="Gateway_13ihv3l" isMarkerVisible="true">
+        <dc:Bounds x="185" y="-25" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="169" y="35" width="82" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0eeioyi_di" bpmnElement="Activity_0eeioyi">
+        <dc:Bounds x="300" y="-40" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

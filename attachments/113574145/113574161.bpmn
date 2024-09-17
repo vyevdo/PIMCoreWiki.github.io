@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:collaboration id="Collaboration_1j3wxoo">
+    <bpmn:participant id="Participant_1w68e5b" name="Заведення нового товару в систему Pim Core вручну (новий сценарій)" processRef="Process_1" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1" isExecutable="false">
+    <bpmn:startEvent id="Event_0w3n99b" name="Постачальник створив новий товар в системі Pim Core">
+      <bpmn:outgoing>Flow_08vlgvu</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Activity_1y8d9y0" name="Заповнити дані на товар">
+      <bpmn:incoming>Flow_08vlgvu</bpmn:incoming>
+      <bpmn:outgoing>Flow_1rzml1o</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_08vlgvu" sourceRef="Event_0w3n99b" targetRef="Activity_1y8d9y0" />
+    <bpmn:exclusiveGateway id="Gateway_1a9irzq" name="Треба додати нове значення в довідник?">
+      <bpmn:incoming>Flow_1rzml1o</bpmn:incoming>
+      <bpmn:outgoing>Flow_0purj3o</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0hnqkdt</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1rzml1o" sourceRef="Activity_1y8d9y0" targetRef="Gateway_1a9irzq" />
+    <bpmn:task id="Activity_0w18e7p" name="Заповнити текстове поле для вводу нового значення">
+      <bpmn:incoming>Flow_0purj3o</bpmn:incoming>
+      <bpmn:outgoing>Flow_13vkce2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0purj3o" name="так" sourceRef="Gateway_1a9irzq" targetRef="Activity_0w18e7p" />
+    <bpmn:task id="Activity_06nlpyk" name="Натиснути кнопку &#34;Зберегти&#34; на товарі">
+      <bpmn:incoming>Flow_13vkce2</bpmn:incoming>
+      <bpmn:outgoing>Flow_05uf9zy</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_13vkce2" sourceRef="Activity_0w18e7p" targetRef="Activity_06nlpyk" />
+    <bpmn:sequenceFlow id="Flow_05uf9zy" sourceRef="Activity_06nlpyk" targetRef="Activity_0pw8a6h" />
+    <bpmn:sequenceFlow id="Flow_0hnqkdt" name="ні" sourceRef="Gateway_1a9irzq" targetRef="Activity_1fdng9f" />
+    <bpmn:sequenceFlow id="Flow_1xmz8o1" sourceRef="Activity_1fdng9f" targetRef="Event_1kfy26r" />
+    <bpmn:serviceTask id="Activity_0pw8a6h" name="Додати нове значення в довідник як неопубліковане">
+      <bpmn:incoming>Flow_05uf9zy</bpmn:incoming>
+      <bpmn:outgoing>Flow_1nxi6z1</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:task id="Activity_1je7cdy" name="Відкрити товар для редагування">
+      <bpmn:incoming>Flow_1nxi6z1</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ri7t0t</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1nxi6z1" sourceRef="Activity_0pw8a6h" targetRef="Activity_1je7cdy" />
+    <bpmn:task id="Activity_1fdng9f" name="Вибрати значення з випадаючого списку на товарі та зберегти">
+      <bpmn:incoming>Flow_0hnqkdt</bpmn:incoming>
+      <bpmn:incoming>Flow_1ri7t0t</bpmn:incoming>
+      <bpmn:outgoing>Flow_1xmz8o1</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="Event_1kfy26r">
+      <bpmn:incoming>Flow_1xmz8o1</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1ri7t0t" sourceRef="Activity_1je7cdy" targetRef="Activity_1fdng9f" />
+    <bpmn:textAnnotation id="TextAnnotation_0gxozpk">
+      <bpmn:text>Якщо нове значення буде неопубліковане в довіднику, то опублікувати новий товар не можна</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1ypqe5z" sourceRef="Activity_1fdng9f" targetRef="TextAnnotation_0gxozpk" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1j3wxoo">
+      <bpmndi:BPMNShape id="Participant_1w68e5b_di" bpmnElement="Participant_1w68e5b" isHorizontal="true">
+        <dc:Bounds x="-250" y="-120" width="1080" height="360" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0gxozpk_di" bpmnElement="TextAnnotation_0gxozpk">
+        <dc:Bounds x="260" y="130" width="170" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1xmz8o1_di" bpmnElement="Flow_1xmz8o1">
+        <di:waypoint x="680" y="150" />
+        <di:waypoint x="680" y="172" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0hnqkdt_di" bpmnElement="Flow_0hnqkdt">
+        <di:waypoint x="70" y="25" />
+        <di:waypoint x="70" y="110" />
+        <di:waypoint x="630" y="110" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="81" y="65" width="9" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05uf9zy_di" bpmnElement="Flow_05uf9zy">
+        <di:waypoint x="410" y="0" />
+        <di:waypoint x="470" y="0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13vkce2_di" bpmnElement="Flow_13vkce2">
+        <di:waypoint x="250" y="0" />
+        <di:waypoint x="310" y="0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0purj3o_di" bpmnElement="Flow_0purj3o">
+        <di:waypoint x="95" y="0" />
+        <di:waypoint x="150" y="0" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="115" y="-18" width="16" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1rzml1o_di" bpmnElement="Flow_1rzml1o">
+        <di:waypoint x="-10" y="0" />
+        <di:waypoint x="45" y="0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_08vlgvu_di" bpmnElement="Flow_08vlgvu">
+        <di:waypoint x="-162" y="0" />
+        <di:waypoint x="-110" y="0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1nxi6z1_di" bpmnElement="Flow_1nxi6z1">
+        <di:waypoint x="570" y="0" />
+        <di:waypoint x="630" y="0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ri7t0t_di" bpmnElement="Flow_1ri7t0t">
+        <di:waypoint x="680" y="40" />
+        <di:waypoint x="680" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0w3n99b_di" bpmnElement="Event_0w3n99b">
+        <dc:Bounds x="-198" y="-18" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="-219" y="25" width="79" height="53" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1y8d9y0_di" bpmnElement="Activity_1y8d9y0">
+        <dc:Bounds x="-110" y="-40" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1a9irzq_di" bpmnElement="Gateway_1a9irzq" isMarkerVisible="true">
+        <dc:Bounds x="45" y="-25" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="28" y="-75" width="83" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0w18e7p_di" bpmnElement="Activity_0w18e7p">
+        <dc:Bounds x="150" y="-40" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_06nlpyk_di" bpmnElement="Activity_06nlpyk">
+        <dc:Bounds x="310" y="-40" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0y0t99z_di" bpmnElement="Activity_0pw8a6h">
+        <dc:Bounds x="470" y="-40" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1je7cdy_di" bpmnElement="Activity_1je7cdy">
+        <dc:Bounds x="630" y="-40" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1fdng9f_di" bpmnElement="Activity_1fdng9f">
+        <dc:Bounds x="630" y="70" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1kfy26r_di" bpmnElement="Event_1kfy26r">
+        <dc:Bounds x="662" y="172" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_1ypqe5z_di" bpmnElement="Association_1ypqe5z">
+        <di:waypoint x="630" y="116" />
+        <di:waypoint x="430" y="139" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

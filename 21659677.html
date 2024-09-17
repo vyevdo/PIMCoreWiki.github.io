@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brocard : Требования черновик</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Brocard</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="12910795.html">Техническое задание</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Brocard : Требования черновик
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Valeriy Kulyk</span>, last modified on Aug 21, 2019
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <ol><li style="list-style-type: decimal;"><p><span>Импорт: </span></p></li></ol><p style="margin-left: 36.0pt;"><span style="color: rgb(0,0,0);">- Необходимы комментарии насчет полей, которые необходимо жестко ограничить, а которые могут хранить произвольные данные;</span></p><p style="margin-left: 36.0pt;"><u><span style="color: rgb(0,0,0);">Ждем таблицу с требования по поверке значений.  Должны иметь возможность редактировать тип данных.</span></u></p><p style="margin-left: 36.0pt;"><span style="color: rgb(0,0,0);">- есть ли данные, которые могут вычисляться сами (например НДС) или же пускай они все же могут быть изменены вручную (например Отбрасываем ли мы инфу про НДС и пересчитываем сами или же просто записываем что есть, несмотря на то что может не совпадать);  НДС рассчитываем автоматически. </span></p><p style="margin-left: 36.0pt;"><span style="color: rgb(0,0,0);">да. Это наименование товара. Ждем алгоритм. Когда мы наименование товара сгенерировали путем автоматической генерации - мы можем его редактировать, но в будущем откатиться до исходной автосгенерированной версии нельзя <strong>Если аналогичное название было вписано руками поверх автогенерированного оно должно проходить валидацию? <img class="emoticon emoticon-warning" src="images/icons/emoticons/warning.svg" data-emoticon-name="warning" alt="(warning)"/><img class="emoticon emoticon-warning" src="images/icons/emoticons/warning.svg" data-emoticon-name="warning" alt="(warning)"/><img class="emoticon emoticon-warning" src="images/icons/emoticons/warning.svg" data-emoticon-name="warning" alt="(warning)"/></strong></span></p><p style="margin-left: 36.0pt;"><span style="color: rgb(0,0,0);">- есть ли еще какие-то спец требования к полям (например как была в их письме блокировка штрих-кода после публикации)</span></p><p style="margin-left: 36.0pt;"><span style="color: rgb(0,0,0);">- кол-во товаров - Саня сказал, что там от силы 80.000 товаров, а их порядка 800.000. Поэтому надо уточнить, что есть критерием того, что есть отдельной позицией, а что - вариантами. </span></p><p style="margin-left: 36.0pt;"><span style="color: rgb(0,0,0);">Ждем уточнения по уникальным штрих кодам. </span></p><ol><li style="list-style-type: decimal;"><p><span>В их схеме жизненного цикла товара предложения изменений информации про товар - кто принимает или отклоняет изменение? И не уверен насчет существования такого механизма</span></p></li></ol><ol><li style="list-style-type: decimal;"><p><span>Наборы - общую стратегию понятна, о составляющих набора сказано, что “</span><span style="color: rgb(31,73,125);">набор из Х текстовых строк</span><span>”. То мы составляющие просто храним текстом или как ссылки на существующие товары?  </span></p><p><span>- (Ингредиенты = состав набора) храним массивом текста так как часть товаров в наборах акционные и не имеют штрих кода. </span></p></li></ol><ol><li style="list-style-type: decimal;"><p><span>Пускай конкретно опишут, как видят один и тот же товар разные роли в разные этапы. Например, когда поставщик вносит инфу, бренд-менеджер ее просто видит в ридонли или же вообще не видит, пока поставщик не переведет товар в другой статус? Есть ли поля, которые не видят конкретные роли?  </span></p><p><span>- </span>Бренд менеджер может параллельно с поставщиком заводить параметры товара. Мы не будем ограничивать видимость товара по этапам. Товар после создания видно всем. Версионирование должно быть включено по умолчанию чтоб все виды товара были отслеживаемыми. </p></li></ol><div>Класс продуктов не структурирован и являет собой просто набор атрибутов</div><div>Попытаемся угадать структуру атрибутов продукта</div><div>Можем опираться на текущие параметры </div><div><strong><img class="emoticon emoticon-warning" src="images/icons/emoticons/warning.svg" data-emoticon-name="warning" alt="(warning)"/> Добавление параметра в класс продукта не должно ломать продукт</strong></div><div><strong><br/></strong></div><div><strong>Торгуемых товаров около 30000 торгуемых наименований (50к исторических наименований) - Нужно предусмотреть и <u>отдельно оценить</u> возможность генерации вариантов на основании загруженных поставщиками продуктов. Поставщик загружает продукты в систему, а она сама агрегирует их в варианты. Вариант это один и тот же продукт с одинаковым штрих кодом который отличается цветом. Если эта доработка дорогая - мы ее не делаем. </strong></div><div><strong><br/></strong></div><div><strong>На текущий момент для вариантов отличаются цвета и обьемы при этом всегда у варианта уникальный штрих код. Штрихкод уникальный идентификатор товара. </strong></div><div><strong><br/></strong></div><div><strong>Всего на данный момент есть n товаров по с уникальными штрих-кодами. Ждем уточнений<img class="emoticon emoticon-warning" src="images/icons/emoticons/warning.svg" data-emoticon-name="warning" alt="(warning)"/></strong></div><div><strong><br/></strong></div><div><strong>Товар</strong></div><div><strong>как только товар получился - он получает статус в работе. </strong></div><div><strong>Правки товара статус не меняют</strong></div><div><strong>Как только товар подтверждается - вносятся изменения</strong></div><div><strong>После этого штрих-код уже изменить нельзя<img class="emoticon emoticon-warning" src="images/icons/emoticons/warning.svg" data-emoticon-name="warning" alt="(warning)"/> Можно только удалить товар и внести его заново. </strong></div><div><strong><br/></strong></div><div><strong>Операцию подтвердить исполняет бренд менеджер или товаровед. </strong></div><div><span style="color: rgb(31,73,125);"> </span></div><div><p class="m_3718337041654284633MsoListParagraph"><span style="color: rgb(31,73,125);">6.<span>      </span></span><span style="color: rgb(31,73,125);">ШК товара после первой публикации является НЕИЗМЕНЯЕМЫМ атрибутом. Для смены ШК необходимо завести товар заново.</span></p><p class="m_3718337041654284633MsoListParagraph"><span style="color: rgb(31,73,125);">7.<span>      </span></span><span style="color: rgb(31,73,125);">Использование вариантов и операцию Перевыпуск товара в </span><span style="color: rgb(31,73,125);">PIMCore </span><span style="color: rgb(31,73,125);">на первом этапе не рассматриваем. Перевыпуск это выпуск аналогичного товара с минорными изменениями и новым штрих кодом. В данный момент не делаем. </span></p><p class="m_3718337041654284633MsoListParagraph"><span style="color: rgb(31,73,125);">8.<span>      </span></span><span style="color: rgb(31,73,125);">Наборы учитываем как обычный товар. Для этого для определенного типа товара добавляем атрибут Ингредиенты, который представляет из себя набор из Х текстовых строк.</span></p><p class="m_3718337041654284633MsoListParagraph"><span style="color: rgb(31,73,125);"><br/></span></p><p class="m_3718337041654284633MsoListParagraph"><span style="color: rgb(31,73,125);">Кастом лейаут наше все. На любом товаре есть все возможные атрибуты. Если поставщик вводит данные по условному товару духи, но при этом выбрал условный тип товара макияж - то он столкнется с тем что у каждого из этих типов товара есть запах. Набор запахов для этого типа товаров разный. Если поставщик выбрал запах &quot;ласковы&quot; из набора запахов макияж, а затем выбрал тип товара - духи. Поле с запахом должно подсветится красным цветом. Поставщик не сможет опубликовать товар так как поле запах содержит не существующий для данного типа товара атрибут. У поставщика будет два варианта. Либо исправить тип товара, либо изменить запах, либо удалить карточку и создать ее заново. </span></p><p class="m_3718337041654284633MsoListParagraph"><strong>Корректно - очищать карту товара после смены типа товара.</strong></p><p class="m_3718337041654284633MsoListParagraph"><span style="color: rgb(31,73,125);">Учетные записи поставщиков заводит админ. Регистрация поставщика невозможна.</span></p><p class="m_3718337041654284633MsoListParagraph">Для всех параметров товара значения который выбираются из списка тип этого параметра должен быть связь один ко многим или один к одному и ссылаться на отдельные соответствующий класс. <br/>Категории - класс<br/>Цвета - класс<br/>Запахи - класс</p><p class="m_3718337041654284633MsoListParagraph"><strong><img class="emoticon emoticon-warning" src="images/icons/emoticons/warning.svg" data-emoticon-name="warning" alt="(warning)"/><img class="emoticon emoticon-warning" src="images/icons/emoticons/warning.svg" data-emoticon-name="warning" alt="(warning)"/><img class="emoticon emoticon-warning" src="images/icons/emoticons/warning.svg" data-emoticon-name="warning" alt="(warning)"/>Зачем нужно заводить классы?  импорт своих классов со стороны или что-то еще?</strong><br/><br/>Каким образом будут администрироваться Custom Layouts? <br/>Необходимо иметь возможность их администрировать ( Я как администратор должен иметь возможность для определенного типа товаров добавить или удалить поля в custom layouts с помощью интерфейса. ) <br/><br/>см демо. </p></div><div><strong><br/></strong></div>
+                    </div>
+
+                                                            <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/21659677/21659678.png">image001.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 04, 2024 11:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brocard : Импорт через API</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Brocard</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="12910795.html">Техническое задание</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="18350118.html">Инструкции</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Brocard : Импорт через API
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Illia Fedorovych</span>, last modified by <span class='editor'> Konstantin Nosov</span> on Jul 27, 2020
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>Для работы с API вам необходимо получить ключ от администратора Pimcore.</p><p>Для детальной информации перейдите по ссылке: <a href="https://pimcore.com/docs/master/Development_Documentation/Web_Services/index.html" class="external-link" rel="nofollow">https://pimcore.com/docs/master/Development_Documentation/Web_Services/index.html</a></p><h2 id="id-ИмпортчерезAPI-Импортизображений">Импорт изображений</h2><p>Для импорта изображений Вам необходимо выполнить POST-запрос на https://{{PIMCORE_HOST}}/webservice/rest/asset?apikey={{PIMCORE_API_KEY}}</p><pre>{{PIMCORE_HOST}} – адрес хоста Pimcore</pre><pre>{{PIMCORE_API_KEY}} – Ваш ключ API.</pre><p> </p><p>Пример JSON данных для запроса:</p><p><br/></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;data&quot;: &quot;…&quot;,
+  &quot;parentId&quot;: 1,
+  &quot;type&quot;: &quot;image&quot;,
+  &quot;filename&quot;: &quot;rest-uploaded-file.jpg&quot;
+}</pre>
+</div></div><p><br/></p><p>Поля:</p><p>data – изображение, закодированное в формате base64;</p><p>parentId – идентификатор родительского элемента (1 – корневой элемент);</p><p>type – тип файла (для изображения – image);</p><p>filename – название файла в Pimcore.</p><p> </p><p>Пример ошибки:</p><p><br/></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence">{
+    &quot;success&quot;: false,
+    &quot;msg&quot;: &quot;API request needs either a valid API key or a valid session.&quot;
+}</pre>
+</div></div><p><br/></p><p>Поля:</p><p>success – индикатор успеха;</p><p>msg – описание ошибки.</p><p> </p><p>Пример успешного ответа:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;id&quot;: 2
+    }
+}</pre>
+</div></div><p><br/>Поля:</p><p>success – индикатор успеха;</p><p>id – идентификатор изображения.</p><p><br/><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/33915796/33915797.png" data-image-src="attachments/33915796/33915797.png" data-unresolved-comment-count="0" data-linked-resource-id="33915797" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2020-4-24_0-24-23.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="33915796" data-linked-resource-container-version="4"></span> <br/><em>Пример выполнения запроса на создание изображения через Postman</em></p><h2 id="id-ИмпортчерезAPI-Импорттоваров">Импорт товаров</h2><p>Для импорта изображений Вам необходимо выполнить POST-запрос на https://{{PIMCORE_HOST}}/webservice/rest/object?apikey={{PIMCORE_API_KEY}}</p><pre>{{PIMCORE_HOST}} – адрес хоста Pimcore</pre><pre>{{PIMCORE_API_KEY}} – Ваш ключ API.</pre><p> </p><p>Пример JSON данных для запроса:</p><p><br/></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;elements&quot;: [
+    ...
+  ],
+  &quot;className&quot;: &quot;product&quot;,
+  &quot;parentId&quot;: 21676,
+  &quot;key&quot;: &quot;API&quot;,
+  &quot;type&quot;: &quot;object&quot;
+}</pre>
+</div></div><p><br/></p><p>Поля:</p><p>elements – список полей товара и их значений;</p><p>className – название класса объекта (для товара – product);</p><p>parentId – идентификатор родительского объекта/папки;</p><p>key – название(ключ) товара в Pimcore;</p><p>type – тип объекта (для товара – object).</p><p> </p><p>Пример ошибки:</p><p><br/></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence">{
+    &quot;success&quot;: false,
+    &quot;msg&quot;: &quot;API request needs either a valid API key or a valid session.&quot;
+}</pre>
+</div></div><p><br/></p><p>Поля:</p><p>success – индикатор успеха;</p><p>msg – описание ошибки.</p><p> </p><p>Пример успешного ответа:</p><p><br/></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence">{
+    &quot;success&quot;: true,
+    &quot;id&quot;: 2
+}</pre>
+</div></div><p><br/></p><p>Поля:</p><p>success – индикатор успеха;</p><p>id – идентификатор товара.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/33915796/33915798.png" data-image-src="attachments/33915796/33915798.png" data-unresolved-comment-count="0" data-linked-resource-id="33915798" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2020-4-24_0-28-30.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="33915796" data-linked-resource-container-version="4"></span></p><p><em>Пример выполнения запроса на создание изображения через Postman</em></p><p><em><span class="confluence-embedded-file-wrapper"><a class="confluence-embedded-file" href="/download/attachments/33915796/product.json?version=1&amp;modificationDate=1587701984766&amp;api=v2" data-nice-type="null" data-file-src="/download/attachments/33915796/product.json?version=1&amp;modificationDate=1587701984766&amp;api=v2" data-linked-resource-id="33915800" data-linked-resource-type="attachment" data-linked-resource-container-id="33915796" data-linked-resource-default-alias="product.json" data-mime-type="application/octet-stream" data-has-thumbnail="false" data-linked-resource-version="1" data-can-edit="true" aria-label="product.json"><img src="download/resources/com.atlassian.confluence.plugins.confluence-view-file-macro:view-file-macro-resources/images/placeholder-medium-file.png" height="250"/><span class="title">product.json</span></a><span class="companion-edit-button-placeholder edit-button-overlay" data-linked-resource-container-id="33915796" data-linked-resource-id="33915800" data-template-name="companionEditIcon" data-source-location="embedded-attachment"></span></span><br/></em></p>
+                    </div>
+
+                                                            <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/33915796/33915797.png">image2020-4-24_0-24-23.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/33915796/33915798.png">image2020-4-24_0-28-30.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/33915796/33915800.json">product.json</a> (application/octet-stream)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 04, 2024 11:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

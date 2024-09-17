@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brocard : Руководство пользователя PIMCore для поставщика</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Brocard</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="12910795.html">Техническое задание</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="18350118.html">Инструкции</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Brocard : Руководство пользователя PIMCore для поставщика
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Illia Fedorovych</span>, last modified on Aug 25, 2020
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p><br/></p><p><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1722771329529 {padding: 0px;}
+div.rbtoc1722771329529 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1722771329529 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1722771329529'>
+<ul class='toc-indentation'>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-ДоступкинструкциямвсистемеPimcore'>Доступ к инструкциям в системе Pimcore</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Авторизация'>Авторизация</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-ИмпортCSVфайла'>Импорт CSV файла</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Созданиеновоготоваравручную'>Создание нового товара вручную</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Созданиеобъктакласса&quot;Товар&quot;'>Создание объкта класса &quot;Товар&quot;</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Заведениеосновныххарактеристиктовара'>Заведение основных характеристик товара</a>
+<ul class='toc-indentation'>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Заведениеосновныхзначений'>Заведение основных значений</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Работасframework'>Работа с framework</a>
+<ul class='toc-indentation'>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Формированиевыпадающихсписков'>Формирование выпадающих списков</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Добавлениеновыхзначений'>Добавление новых значений</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Заведениеобязательныхатрибутовнакарточкетовара'>Заведение обязательных атрибутов на карточке товара</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Редактированиетовара'>Редактирование товара</a>
+<ul class='toc-indentation'>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Длятого,чтобывыбратьтиптовара,откройтепапку&quot;Типтовара&quot;ввкладке&quot;Values&quot;'>Для того, чтобы выбрать тип товара, откройте папку &quot;Тип товара&quot; в вкладке &quot;Values&quot;</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Длятого,чтобысделатьпоискнужногозначения,нажмитенаиконкупоиска'>Для того, чтобы сделать поиск нужного значения, нажмите на иконку поиска</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Затем,впоявившемсяполевведитеназваниенужногозначенияинажмитеEnter.'>Затем, в появившемся поле введите название нужного значения и нажмите Enter.</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Перетянитевыбранныйтиптоваранаполе&quot;Типтовара&quot;вкарточкетовара'>Перетяните выбранный тип товара на поле &quot;Тип товара&quot; в карточке товара</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Нажмитекнопку&quot;Save&quot;длясохраненияизменений'>Нажмите кнопку &quot;Save&quot; для сохранения изменений</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Нажмитенакнопку&quot;Reload&quot;,чтобыперезагрузитькарточкутовара'>Нажмите на кнопку &quot;Reload&quot;, чтобы перезагрузить карточку товара</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Послеперезагрузкитоваравкарточкепоявятсяновыевкладкидлявнесенияинформации'>После перезагрузки товара в карточке появятся новые вкладки для внесения информации</a>
+<ul class='toc-indentation'>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Работасполями,которыеявляютсяссылкаминаобъекты'>Работа с полями, которые являются ссылками на объекты</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Работасполями,которыеявляютсяссылкаминаобъекты(альтернативныйметод)'>Работа с полями, которые являются ссылками на объекты (альтернативный метод)</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Работастекстовымиичисловымиполями'>Работа с текстовыми и числовыми полями</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Работасвыпадающимисписками'>Работа с выпадающими списками</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Работасдатами'>Работа с датами</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Работасизображениями'>Работа с изображениями</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Работассуществующимиизображениями'>Работа с существующими изображениями</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Работассуществующимиизображениями(альтернативныйметод)'>Работа с существующими изображениями (альтернативный метод)</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Загрузкановыхизображений'>Загрузка новых изображений</a></li>
+<li><a href='#id-РуководствопользователяPIMCoreдляпоставщика-Сохранениеизменений'>Сохранение изменений</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div></p><p>Руководство пользователя Pimcore для поставщика</p><h1 id="id-РуководствопользователяPIMCoreдляпоставщика-ДоступкинструкциямвсистемеPimcore">Доступ к инструкциям в системе Pimcore</h1><p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="400" src="attachments/33915832/33915834.png" data-image-src="attachments/33915832/33915834.png" data-unresolved-comment-count="0" data-linked-resource-id="33915834" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2020-4-24_13-24-49.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="33915832" data-linked-resource-container-version="1"></span><p><br/></p><p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="400" src="attachments/33915832/33915835.png" data-image-src="attachments/33915832/33915835.png" data-unresolved-comment-count="0" data-linked-resource-id="33915835" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2020-4-24_13-25-31.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="33915832" data-linked-resource-container-version="1"></span></p><p><br/></p><p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="400" src="attachments/33915832/33915836.png" data-image-src="attachments/33915832/33915836.png" data-unresolved-comment-count="0" data-linked-resource-id="33915836" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2020-4-24_13-26-34.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="33915832" data-linked-resource-container-version="1"></span></p></p><h1 id="id-РуководствопользователяPIMCoreдляпоставщика-Авторизация">Авторизация</h1><p>После того, как Вы будете зарегистрированы, Вы получите письмо-приглашение на почту.<br/><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/42336281/42336397.png" data-image-src="attachments/42336281/42336397.png" data-unresolved-comment-count="0" data-linked-resource-id="42336397" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav7b1cfbfaf910ba930aa65aee862f7455.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="42336281" data-linked-resource-container-version="7"></span> <br/><em>Пример письма-приглашения</em> </p><p>После перехода на страницу профиля Вы можете поменять пароль в разделе «Изменить пароль (Change Password)». Вы можете придумать новый пароль сами или воспользоваться генерацией пароля, нажав на иконку молнии.<br/><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/42336281/42336312.png" data-image-src="attachments/42336281/42336312.png" data-unresolved-comment-count="0" data-linked-resource-id="42336312" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2020-4-24_0-15-20.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="42336281" data-linked-resource-container-version="7"></span> <br/><em>Кнопка для генерации пароля</em> </p><p><br/>После внесения изменений, нажмите кнопку «Сохранить (Save)».</p><h1 id="id-РуководствопользователяPIMCoreдляпоставщика-ИмпортCSVфайла">Импорт CSV файла</h1><p>Нажмите ПКМ на &quot;Home&quot; в разделе &quot;Products&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/42336281/42336311.jpg" data-image-src="attachments/42336281/42336311.jpg" data-unresolved-comment-count="0" data-linked-resource-id="42336311" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_1.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="42336281" data-linked-resource-container-version="7"></span></p><p>Затем выберите пункт &quot;Product&quot; в разделе &quot;CSV Import&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/42336281/42336310.jpg" data-image-src="attachments/42336281/42336310.jpg" data-unresolved-comment-count="0" data-linked-resource-id="42336310" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_2.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="42336281" data-linked-resource-container-version="7"></span></p><p>В появившемся окне выберите файл для загрузки (заполненную форму для поставщиков в формате CSV).</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/42336281/42336309.jpg" data-image-src="attachments/42336281/42336309.jpg" data-unresolved-comment-count="0" data-linked-resource-id="42336309" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_3.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="42336281" data-linked-resource-container-version="7"></span></p><p>Для импорта файла нужно загрузить необходимые настройки Pimcore. Для того, чтобы загрузить настройки, нажмите на кнопку &quot;Load&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/42336281/42336306.jpg" data-image-src="attachments/42336281/42336306.jpg" data-unresolved-comment-count="0" data-linked-resource-id="42336306" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_6.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="42336281" data-linked-resource-container-version="7"></span></p><p>В появившемся окне выберите &quot;Форма пример&quot; и нажмите &quot;ОК&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/42336281/42336305.jpg" data-image-src="attachments/42336281/42336305.jpg" data-unresolved-comment-count="0" data-linked-resource-id="42336305" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_7.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="42336281" data-linked-resource-container-version="7"></span></p><p>Для того, чтобы начать процесс импорта, нажмите &quot;Import&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/42336281/42336300.jpg" data-image-src="attachments/42336281/42336300.jpg" data-unresolved-comment-count="0" data-linked-resource-id="42336300" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_12.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="42336281" data-linked-resource-container-version="7"></span></p><p>После завершения процесса импорта, Вы получите сообщение. Нажмите кнопку &quot;ОК&quot;, чтобы перейти к результатам.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/42336281/42336299.jpg" data-image-src="attachments/42336281/42336299.jpg" data-unresolved-comment-count="0" data-linked-resource-id="42336299" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_13.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="42336281" data-linked-resource-container-version="7"></span></p><p>На вкладке &quot;Import Report&quot; находятся результаты последнего процесса импорта. В случае, если при импорте возникли проблемы, в колонке &quot;Message&quot; будет находиться описание ошибки.</p><p>Для того, чтобы открыть успешно импортированный товар, нажмите на значке &quot;Open&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/42336281/42336298.jpg" data-image-src="attachments/42336281/42336298.jpg" data-unresolved-comment-count="0" data-linked-resource-id="42336298" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_14.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="42336281" data-linked-resource-container-version="7"></span></p><p><span>Также вы можете проверить наличие импортированных товаров в полном списке, нажав на папку &quot;Home&quot; и проверив их наличие в списке.</span></p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/42336281/42336401.png" data-image-src="attachments/42336281/42336401.png" data-unresolved-comment-count="0" data-linked-resource-id="42336401" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2020-8-17_23-32-34.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="42336281" data-linked-resource-container-version="7"></span></p><h1 id="id-РуководствопользователяPIMCoreдляпоставщика-Созданиеновоготоваравручную">Создание нового товара вручную</h1><p><h1 id="id-РуководствопользователяPIMCoreдляпоставщика-Созданиеобъктакласса&quot;Товар&quot;">Создание объкта класса &quot;Товар&quot;</h1><ol><li>Нажмите ПКМ на &quot;Home&quot; в вкладке &quot;Products&quot;<br/><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/27297720/27297723.jpg" data-image-src="attachments/27297720/27297723.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297723" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_1.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297720" data-linked-resource-container-version="14"></span></li><li><span style="letter-spacing: 0.0px;">Выберите пункт &quot;Product&quot; в разделе &quot;Add Object&quot;<br/></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/27297720/27297724.jpg" data-image-src="attachments/27297720/27297724.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297724" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_2.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297720" data-linked-resource-container-version="14"></span></li><li><span style="letter-spacing: 0.0px;">Введите название для нового товара (оно будет отображаться в списке слева и должно быть уникальным) и нажмите &quot;ОК&quot;<br/><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/27297720/27297725.jpg" data-image-src="attachments/27297720/27297725.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297725" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_3.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297720" data-linked-resource-container-version="14"></span></span></li></ol><h1 id="id-РуководствопользователяPIMCoreдляпоставщика-Заведениеосновныххарактеристиктовара"><span style="letter-spacing: 0.0px;">Заведение основных характеристик товара</span></h1><h2 id="id-РуководствопользователяPIMCoreдляпоставщика-Заведениеосновныхзначений"><span style="letter-spacing: 0.0px;">Заведение основных значений</span></h2><ol><li>Добавить торговую марку<br/>Для этого открываем созданный товар и на вкладке &quot;Тип товара&quot; заполняем поле &quot;Торговая марка&quot;:<br/><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/27297720/113574171.png" data-image-src="attachments/27297720/113574171.png" data-unresolved-comment-count="0" data-linked-resource-id="113574171" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2023-4-28_10-29-3.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="27297720" data-linked-resource-container-version="14"></span><br/><ol><li>нажав на лупу и воспользоваться поиском<br/><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/27297720/113574170.png" data-image-src="attachments/27297720/113574170.png" data-unresolved-comment-count="0" data-linked-resource-id="113574170" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2023-4-28_10-28-3.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="27297720" data-linked-resource-container-version="14"></span></li><li>Перетащить элемент со значений, папка &quot;Торговая марка&quot;<br/><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/27297720/113574172.png" data-image-src="attachments/27297720/113574172.png" data-unresolved-comment-count="0" data-linked-resource-id="113574172" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2023-4-28_10-31-34.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="27297720" data-linked-resource-container-version="14"></span></li></ol></li><li>Заполнить поле &quot;штрих код&quot;<br/>Согласно требованиям штрих код может присваиваться автоматически либо ввести его вручную.<ol><li>Для того чтобы штрих код сгенерировался автоматически необходимо соблюдение следующих правил:<ol><li>На присвоенной к товару Торговой марке должна быть заполнена вкладка &quot;EAN Generation&quot;<ol><li>поле &quot;Min val&quot;</li><li>поле &quot;Max val&quot;</li></ol></li><li>В поле штрих код на вкладке &quot;3- свойства&quot; на товаре поставить цифру &quot;0&quot;</li><li>Нажать кнопку &quot;Save&quot;. После этого штрих код заполнится автоматически</li></ol></li><li>Заполнить поле &quot;Штрих код&quot; на вкладке &quot;3- свойства&quot;<br/><br/>!!! Если штрих кода, нет в справочнике &quot;Barcode&quot;, то система создаст в нем новую запись</li></ol></li><li>Заполнение поля &quot;Категория ТМ дополнительная&quot;<br/>Поле категория ТМ дополнительная (CategoryTM_Additional_select) заполняется автоматически после выбора Торговой марки на товаре и нажатии на Save. Значение выбрано с  объекта Торговая марка, поле &quot;trade_mark_category_extra&quot;</li><li>Заполнение поля &quot;Семейство товара&quot;<br/>После того, как было заполнено поле &quot;Категория ТМ дополнительная&quot; и сохранены изменения на товаре формируется выпадающий список значений для поля &quot;Семейство товара&quot;. Выбираем значение и нажимаем &quot;Save&quot;. Список значений можно добавлять и редактировать в папке &quot;Набор полей и правил&quot;, добавляя туда объекты &quot;productSetFieldsRules&quot;</li><li>Заполнение поля &quot;Тип товара&quot;<br/>После заполнения поля &quot;Семейство товара&quot; формируется выпадающий для поля &quot;Тип товара&quot;. Выбираем значение и нажимаем &quot;Save&quot;. Список значений можно добавлять и редактировать в папке &quot;Набор полей и правил&quot;, добавляя туда объекты &quot;productSetFieldsRules&quot;</li><li>Заполнение поля &quot;Пол&quot;<br/>После заполнения поля &quot;Тип товара&quot; формируется выпадающий для поля &quot;Пол&quot;. Выбираем значение и нажимаем &quot;Save&quot;. Список значений можно добавлять и редактировать в папке &quot;Набор полей и правил&quot;, добавляя туда объекты &quot;productSetFieldsRules&quot;<br/>!!! Значений в поле &quot;Пол&quot; можна выбрать несколько. Для этого используем кнопку &quot;Ctrl&quot;</li><li>После заполнения полей в пунктах 1-6 система Pim Core автоматически заполняет следующие поля:<br/><ol><li>Область применения (для фильтра в им) (productUsageArea)</li><li>Область применения (для Тетры) (productUsageAreaTetra)</li><li>Категория всех уровней (Category)</li><li>Тип товара атрибут (productAttributeType) <span style="color: rgb(0,0,255);">в работе (
+<span class="jira-issue" data-jira-key="BRD-254" >
+                    <a href="https://jira.nodeart.app/browse/BRD-254?src=confmacro" class="jira-issue-key"><img class="icon"
+                                                                                      src="https://jira.nodeart.app/secure/viewavatar?size=xsmall&amp;avatarId=10316&amp;avatarType=issuetype"/>BRD-254</a>
+                            -
+            <span class="summary">Автоматическое заполнение поля Тип товара атрибут</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle             aui-lozenge-success
+     jira-macro-single-issue-export-pdf">DONE</span>
+                </span>
+)</span></li></ol></li><li> <br/><br/><h2 id="id-РуководствопользователяPIMCoreдляпоставщика-Работасframework">Работа с framework</h2></li></ol><p>Согласно требованиям framework на товаре присваивается автоматически согласно сдеющего правила:</p><ul style="list-style-type: square;"><li>Если на типе товара в поле Тип фреймворка выбрано &quot;Общий&quot;, то значение берем с поля Framework на типе товара.</li></ul><ul style="list-style-type: square;"><li>Если на типе товара в поле Тип фреймворка выбрано &quot;Уникальный&quot;, то значение берем с поля FrameworkCode в объекте торговая марка.</li></ul><p>Перечень всех фреймворков находится в папке &quot;Настройка структуры вариантов&quot;, объекты &quot;VariantStructure&quot;</p><p>После того как на товар был присвоен framework можна заполнить следующие поля:</p><ol><li>Номер тона</li><li>Название тона</li><li>Код Hex</li><li>Объем</li></ol><p>Первые 3 поля будут необязательными -<span style="color: rgb(51,102,255);"> внести изменения на Feature and Dev</span></p><h3 id="id-РуководствопользователяPIMCoreдляпоставщика-Формированиевыпадающихсписков"><span style="color: rgb(0,0,0);">Формирование выпадающих списков</span></h3><p><span style="color: rgb(0,0,0);">Для формирвоания выпадающих списков по полям выше необходимо добавлять объекты productVariantStructureMeasure (Связка Framework с кодом структуры) и productVariantStructureBasikMeaning (Непосредственно сами значения), что будут находится в папках:</span></p><ul><li><span style="color: rgb(0,0,0);">Вариант структура измерения - productVariantStructureMeasure</span></li><li><span style="color: rgb(0,0,0);">Вариант Структура Базовые Значения - productVariantStructureBasikMeaning</span></li></ul><p><span style="color: rgb(0,0,0);">Обязательно значения номер тона, название тона и код HEX должны быть добавлены в соответствующие справочники</span></p><h3 id="id-РуководствопользователяPIMCoreдляпоставщика-Добавлениеновыхзначений"><span style="color: rgb(0,0,0);">Добавление новых значений</span></h3><p><span style="color: rgb(0,0,0);">Правило: возможно добавление, когда к фреймворку создан объект productVariantStructureMeasure, что определяет код структуры</span></p><ol><li><span style="color: rgb(0,0,0);">На вкладке Framework заполнить текстовые поля справа и нажать &quot;Отправить&quot;</span></li><li><span style="color: rgb(0,0,0);">Данные поля будут добавлены как новые значения в справочники как неопубликованные:</span><ol><li><span style="color: rgb(0,0,0);">Номер тона</span></li><li><span style="color: rgb(0,0,0);">Название тона</span></li><li><span style="color: rgb(0,0,0);">Код HEX</span></li><li><span style="color: rgb(0,0,0);">Вариант Структура Базовые Значения</span></li></ol></li><li><span style="color: rgb(0,0,0);">Опубликовать значения в соответствующих справочниках</span></li><li><span style="color: rgb(0,0,0);">Завести новые значения на товар через выпадающие списки</span></li></ol><h1 id="id-РуководствопользователяPIMCoreдляпоставщика-Заведениеобязательныхатрибутовнакарточкетовара">Заведение обязательных атрибутов на карточке товара</h1><p>Для возможности опубликовать товар необходимо заполнить обязательные атрибуты на товаре:</p><ul><li>артикул</li><li><strong style="">Группа ароматов</strong></li><li><strong style="">Линия оригинальное название</strong></li><li><strong style="">Линия на украинском языке</strong></li><li><strong style="">Название товара</strong></li><li><strong style="">Название товара укр</strong></li><li><strong style="">Название товара рус</strong></li><li><strong style="">Дополнительное свойство/действие/эффект, которое должно отобразиться в названии Navision</strong></li><li><strong style=""><span>Характер аромата </span></strong></li><li><strong style=""><span>Ноты</span></strong></li><li><strong style=""><span>СПФ</span></strong></li><li><strong style=""><span>Эффект</span></strong></li><li><strong style=""><span>Покрытие</span></strong></li><li><strong style=""><span>Тип кожи</span></strong></li><li><strong style=""><span>Тип волос</span></strong></li><li><strong style=""><span>Возраст</span></strong></li><li><strong style=""><span>Действие/свойство</span></strong></li><li><strong style=""><span>Ключевые ингредиенты</span></strong></li><li><strong style=""><span>Особенности товара/упаковки</span></strong></li><li><strong style=""><span>Текстура/консистенция </span></strong></li><li><strong style=""><span>Лимитированный выпуск</span></strong></li><li><strong style=""><span>Розничные рекомендованные цены</span></strong></li><li><strong style=""><span>Срок хранения, мес.</span></strong></li><li><strong style=""><span>№ сертификата ГЗ</span></strong></li><li><strong style=""><span>Длина продукта в упаковке, мм</span></strong></li><li><strong style=""><span>Ширина продукта в упаковке, мм</span></strong></li><li><strong style=""><span>Высота продукта в упаковке, мм</span></strong></li><li><strong style=""><span>Вес продукта в упаковке, г</span></strong></li><li><strong style=""><span>Количество в упаковке для продажи</span></strong></li><li><strong style=""><span>Количество в коробке</span></strong></li><li><strong style=""><span>Код ВЭД</span></strong></li><li><strong style=""><span>Состав товара (INCI)</span></strong></li><li><strong style=""><span>Состав товара рус</span></strong></li><li><strong style=""><span>Состав товара укр</span></strong></li><li><strong style=""><span>Способ применения рус</span></strong></li><li><strong style=""><span>Способ применения укр</span></strong></li><li><strong style=""><span>Представленность позиции</span></strong></li></ul><p><br/></p><p><br/></p><p><br/></p></p><h1 id="id-РуководствопользователяPIMCoreдляпоставщика-Редактированиетовара">Редактирование товара</h1><p>Для того, чтобы отредактировать товар, откройте его двойным нажатием в разделе &quot;Products&quot;.<p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297785.jpg" data-image-src="attachments/27297782/27297785.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297785" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_1.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><p>Для того, чтобы были доступны все поля, нужно, чтобы поле &quot;Тип товара&quot; было заполнено. Если оно пустое, выполните следующие шаги:</p><h2 class="auto-cursor-target" id="id-РуководствопользователяPIMCoreдляпоставщика-Длятого,чтобывыбратьтиптовара,откройтепапку&quot;Типтовара&quot;ввкладке&quot;Values&quot;">Для того, чтобы выбрать тип товара, откройте папку &quot;Тип товара&quot; в вкладке &quot;Values&quot;</h2><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/27297731/27297735.jpg" data-image-src="https://wiki.nodeart.app/download/attachments/27297731/image_2.jpg?version=1&amp;modificationDate=1581090766890&amp;api=v2"></span></p><h2 id="id-РуководствопользователяPIMCoreдляпоставщика-Длятого,чтобысделатьпоискнужногозначения,нажмитенаиконкупоиска">Для того, чтобы сделать поиск нужного значения, нажмите на иконку поиска</h2><p><span class="confluence-embedded-file-wrapper"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/78839978.png" data-image-src="attachments/27297782/78839978.png" data-unresolved-comment-count="0" data-linked-resource-id="78839978" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2020-8-17_23-40-13.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></span></p><h2 id="id-РуководствопользователяPIMCoreдляпоставщика-Затем,впоявившемсяполевведитеназваниенужногозначенияинажмитеEnter.">Затем, в появившемся поле введите название нужного значения и нажмите Enter.</h2><p><span class="confluence-embedded-file-wrapper"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/78839979.png" data-image-src="attachments/27297782/78839979.png" data-unresolved-comment-count="0" data-linked-resource-id="78839979" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2020-8-17_23-41-59.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></span></p><h2 id="id-РуководствопользователяPIMCoreдляпоставщика-Перетянитевыбранныйтиптоваранаполе&quot;Типтовара&quot;вкарточкетовара">Перетяните выбранный тип товара на поле &quot;Тип товара&quot; в карточке товара</h2><p><span class="confluence-embedded-file-wrapper"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/78839980.png" data-image-src="attachments/27297782/78839980.png" data-unresolved-comment-count="0" data-linked-resource-id="78839980" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2020-8-17_23-43-1.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></span></p><h2 id="id-РуководствопользователяPIMCoreдляпоставщика-Нажмитекнопку&quot;Save&quot;длясохраненияизменений">Нажмите кнопку &quot;Save&quot; для сохранения изменений</h2><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/27297731/27297737.jpg" data-image-src="https://wiki.nodeart.app/download/attachments/27297731/image_4.jpg?version=1&amp;modificationDate=1581090767694&amp;api=v2"></span></p><h2 id="id-РуководствопользователяPIMCoreдляпоставщика-Нажмитенакнопку&quot;Reload&quot;,чтобыперезагрузитькарточкутовара">Нажмите на кнопку &quot;Reload&quot;, чтобы перезагрузить карточку товара</h2><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/27297731/27297738.jpg" data-image-src="https://wiki.nodeart.app/download/attachments/27297731/image_5.jpg?version=1&amp;modificationDate=1581090768060&amp;api=v2"></span></p><h2 id="id-РуководствопользователяPIMCoreдляпоставщика-Послеперезагрузкитоваравкарточкепоявятсяновыевкладкидлявнесенияинформации">После перезагрузки товара в карточке появятся новые вкладки для внесения информации</h2><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/27297731/27297739.jpg" data-image-src="https://wiki.nodeart.app/download/attachments/27297731/image_6.jpg?version=1&amp;modificationDate=1581090768365&amp;api=v2"></span></p><p><br/></p><p>Перейдем на вкладку &quot;2 - Свойства&quot; для того, чтобы продемонстрировать работу с разными типами данных.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297786.jpg" data-image-src="attachments/27297782/27297786.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297786" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_2.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><h3 id="id-РуководствопользователяPIMCoreдляпоставщика-Работасполями,которыеявляютсяссылкаминаобъекты">Работа с полями, которые являются ссылками на объекты</h3><p>В Pimcore все поля, значение которых выбирается из списка, являются объектами и поэтому для их заполнения в карточке товара надо привязать товар к объекту-значению списка. Все такие поля-списки и их значения находятся в правой панели &quot;Значения&quot; (&quot;Values&quot;). Значения для таких полей можно выбрать либо перетягиванием из панели &quot;Значения&quot;, либо нажав на иконку поиска (см. <strong>Работа с полями, которые являются ссылками на объекты (альтернативный метод)</strong>). Покажем заполнение таких полей на примере поля &quot;Торговая марка&quot;.</p><p>Поле &quot;Торговая марка&quot; (1) - это ссылка на объект, в котором хранится значение. Красный значок навигации (2) указывает на то, что значение можно установить, перетянув объект на поле (Drag-and-drop).</p><p>Для того, чтобы найти нужную торговую марку, откройте папку &quot;Торговая марка&quot; (3) в разделе &quot;Values&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297787.jpg" data-image-src="attachments/27297782/27297787.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297787" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_3.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><p>Для того, чтобы задать значение, перетяните объект с раздела &quot;Values&quot; на нужное поле.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297788.jpg" data-image-src="attachments/27297782/27297788.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297788" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_4.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><h3 id="id-РуководствопользователяPIMCoreдляпоставщика-Работасполями,которыеявляютсяссылкаминаобъекты(альтернативныйметод)">Работа с полями, которые являются ссылками на объекты (альтернативный метод)</h3><p>Также вы можете задать значение альтернативным способом. Для этого нажмите на значок поиска (Search).</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297789.jpg" data-image-src="attachments/27297782/27297789.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297789" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_5.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><p>В появившемся окне Вы увидите список объектов, которые могут быть использованы как значение. Для поиска, введите текст и нажмите кнопку &quot;Search&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297790.jpg" data-image-src="attachments/27297782/27297790.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297790" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_6.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><p>Выберите нужное значение с помощью двойного нажатия либо ПКМ и затем &quot;Add&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297791.jpg" data-image-src="attachments/27297782/27297791.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297791" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_7.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><p>Проверьте, что значение появилось в разделе &quot;Your Selection&quot; и нажмите &quot;Select&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297792.jpg" data-image-src="attachments/27297782/27297792.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297792" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_8.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><h3 id="id-РуководствопользователяPIMCoreдляпоставщика-Работастекстовымиичисловымиполями">Работа с текстовыми и числовыми полями</h3><p>Для того, чтобы задать текстовое или числовое значение, просто введите его в нужное поле.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297793.jpg" data-image-src="attachments/27297782/27297793.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297793" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_9.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297794.jpg" data-image-src="attachments/27297782/27297794.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297794" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_10.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><h3 id="id-РуководствопользователяPIMCoreдляпоставщика-Работасвыпадающимисписками">Работа с выпадающими списками</h3><p>Для того, чтобы задать значение выбора, откройте список вариантов и выберите нужное значение.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297795.jpg" data-image-src="attachments/27297782/27297795.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297795" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_11.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297796.jpg" data-image-src="attachments/27297782/27297796.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297796" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_12.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><h3 id="id-РуководствопользователяPIMCoreдляпоставщика-Работасдатами">Работа с датами</h3><p>Для того, чтобы задать значение даты, нажмите на значок календаря и выберите нужную дату.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297797.jpg" data-image-src="attachments/27297782/27297797.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297797" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_13.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297798.jpg" data-image-src="attachments/27297782/27297798.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297798" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_14.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297799.jpg" data-image-src="attachments/27297782/27297799.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297799" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_15.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><h3 id="id-РуководствопользователяPIMCoreдляпоставщика-Работасизображениями">Работа с изображениями</h3><p>Для демонстрации работы с изображениями перейдем на вкладку &quot;3 - Контент&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297800.jpg" data-image-src="attachments/27297782/27297800.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297800" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_16.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><p>Если изображение уже существует в системе PImcore, откройте раздел &quot;Assets&quot; для просмотра доступных изображений.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297801.jpg" data-image-src="attachments/27297782/27297801.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297801" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_17.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><h3 id="id-РуководствопользователяPIMCoreдляпоставщика-Работассуществующимиизображениями">Работа с существующими изображениями</h3><p>Поскольку на полях для изображений также присутствует красный значок навигации, Вы можете перетянуть изображение из раздела &quot;Assets&quot; на нужное поле.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297802.jpg" data-image-src="attachments/27297782/27297802.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297802" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_18.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><h3 id="id-РуководствопользователяPIMCoreдляпоставщика-Работассуществующимиизображениями(альтернативныйметод)">Работа с существующими изображениями (альтернативный метод)</h3><p>Также Вы можете воспользоваться альтернативным методом выбора. Для этого нажмите на значок меню внутри поля для изображения.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297803.jpg" data-image-src="attachments/27297782/27297803.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297803" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_19.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><p>Затем выберите пункт &quot;Search&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297804.jpg" data-image-src="attachments/27297782/27297804.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297804" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_20.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><p>Нажмите кнопку &quot;Search&quot; для отображения всех доступных изображений.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297805.jpg" data-image-src="attachments/27297782/27297805.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297805" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_21.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><p>Выберите нужное изображение из списка двойным нажатием мыши.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297806.jpg" data-image-src="attachments/27297782/27297806.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297806" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_22.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><h3 id="id-РуководствопользователяPIMCoreдляпоставщика-Загрузкановыхизображений">Загрузка новых изображений</h3><p>Для того, чтобы загрузить файл и сразу же использовать его как значение поля, нажмите на значок меню внутри поля для изображения.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297807.jpg" data-image-src="attachments/27297782/27297807.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297807" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_23.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><p>После этого выберите пункт &quot;Upload&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297808.jpg" data-image-src="attachments/27297782/27297808.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297808" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_24.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><p>В появившемся окне выберите изображение для загрузки.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297809.jpg" data-image-src="attachments/27297782/27297809.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297809" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_25.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><p>После загрузки, изображение появится в нужном поле.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297810.jpg" data-image-src="attachments/27297782/27297810.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297810" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_26.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p><h3 id="id-РуководствопользователяPIMCoreдляпоставщика-Сохранениеизменений">Сохранение изменений</h3><p>Для сохранения изменений нажмите кнопку &quot;Save&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297782/27297811.jpg" data-image-src="attachments/27297782/27297811.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297811" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_27.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297782" data-linked-resource-container-version="5"></span></p></p>
+                    </div>
+
+                                                            <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336282.png">image2020-4-24_13-27-27.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336283.jpg">image_27.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336284.jpg">image_26.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336285.jpg">image_25.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336286.jpg">image_24.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336287.jpg">image_23.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336288.jpg">image_22.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336289.jpg">image_21.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336290.jpg">image_20.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336291.jpg">image_19.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336292.jpg">image_18.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336293.jpg">image_17.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336294.jpg">image_16.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336295.png">image2020-4-24_0-28-30.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336296.png">image2020-4-24_0-24-23.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336297.jpg">image_15.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336298.jpg">image_14.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336299.jpg">image_13.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336300.jpg">image_12.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336301.jpg">image_11.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336302.jpg">image_10.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336303.jpg">image_9.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336304.jpg">image_8.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336305.jpg">image_7.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336520.jpg">image_6.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336307.jpg">image_5.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336308.jpg">image_4.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336519.jpg">image_3.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336518.jpg">image_2.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336517.jpg">image_1.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336312.png">image2020-4-24_0-15-20.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336313.png">image2020-4-24_0-14-48.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336314.png">image2020-4-24_0-12-47.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336315.png">image2020-4-24_0-12-12.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336316.png">image2020-4-24_0-11-14.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336317.json">product.json</a> (application/octet-stream)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336318.png">worddav1d5b7d5e7325ba07f0d5306b6e28adc6.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336319.png">worddav0ae5a216ea77ba79e3201527df355dfe.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336320.png">worddavdbad917ecab9afbd4b8e3f24dd9c8e2e.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336321.png">worddav291e435f1de117c9853070be31cba44d.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336322.png">worddav44d9ed18ebcb0eb41e1de1e60b59f70d.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336323.png">worddava1e0a400da7ed009615ce86c08d70cd5.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336324.png">worddavaf808c131fbd9297b325c6b3c527bbf1.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336325.png">worddavd342c4a04f8eec2f7cf4513fb22aa629.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336326.png">worddavcf00f6baf9c7ee9fdff0c06fd27a58e3.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336327.png">worddavc95c516f1a60f073e445a40720552dd6.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336328.png">worddav220d94a1add7f858747e4a780f55b91d.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336329.png">worddave600e6dd7155e02d6bc9798bfcf7e798.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336330.png">worddav087a0079dcdab560843805a323bf5da0.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336331.png">worddav14dcfef62a6312f44af44d4e2611bae3.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336332.png">worddavba48fad1b5c117ff2d2a6910f10633ca.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336333.png">worddav83183572c51920261d1afc1b87b0c0f9.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336334.png">worddavbca4c80fddf9dd717169d4f173e9fa83.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336335.png">worddav3f7e74de2414eb27ad8e47eb1fda3e91.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336336.png">worddavb3cee07eb8d6f180aeddc1907d012053.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336337.png">worddav2b4d5f1d9ab5c7d04be11549ded87e2c.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336338.png">worddav7d3adf173fc404fa431e291ac63bdc54.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336339.png">worddavc09e94b25c66f44107ec92d518f4ffb9.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336340.png">worddavfa9ec2c0070d3529c288f81767b82ded.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336341.png">worddavb6c37637862728027350ab28bde9509c.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336342.png">worddav1bf920fa9ae4ff908f656408e9835a8a.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336343.png">worddavc8e7ef7e712ac97ad39fe6934aa86de1.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336344.png">worddavfbe8f13e7a5e0ca9dc133d771aea5cea.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336345.png">worddav098076273ec332075f7b6b8154494ec1.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336346.png">worddav3d1819365ebb38e6194c162dc6f94345.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336347.png">worddav83117823edb35c1534ae8502067aa0de.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336348.png">worddavc41f228ab52b7603e19278cfa2b84e8e.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336349.png">worddav411abef5a2becbf1652e88df1489736b.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336350.png">worddav083b3962aa754c467f2ad30ae213b04c.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336351.png">worddavfa069d0b69315cb7962fcd46a7bf5dcb.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336352.png">worddavf8936c0e36e89c013ce3881f2cb33039.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336353.png">worddavdbe03ea0dfd8bfda1923b75fbdc6d538.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336354.png">worddave81569107d817d08e3547deba2ef37c4.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336355.png">worddavc0a6dbd70a858a3112e63139c018179b.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336356.png">worddavf0fda7d1f62126975dad86f1cd8bd28c.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336357.png">worddavf65c1825b6dee6d983694e4c4c93b16b.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336358.png">worddav1de4719437be47d6d81125cd071ef302.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336359.png">worddav8979891b083e74aff88793c7feca15d1.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336360.png">worddav51eed2f33f87ead7229714c587a7c27d.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336361.png">worddav7bf30db33f33eb64159950b0b2f7378f.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336362.png">worddav6e49b4891981683f91b13e5315639f7f.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336363.png">worddav8957072b03484123fd18eca6d1d90339.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336364.png">worddav808de6e437a2d9a1253d27e727a43f29.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336365.png">worddavb8c749875bcd2004071941eb47ed1cca.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336366.png">worddavca61dd330f468002e945b9bcd3bc61b3.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336367.png">worddav5a223fff6defbea8ab3d0be606d1c381.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336368.png">worddav5fe0b5c01ed7851a1756f3a07e035522.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336369.png">worddavdf02830fa9f8803bc11d28912ba32340.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336370.png">worddavd23b5dc6e4b641d100536b0a02efe3bc.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336371.png">worddav35f406fd8cc9070e73e93c23c5ecd2e1.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336372.png">worddav14f2f6b29911980bbf0dcb8bbbbb1a47.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336373.png">worddavef9c5d7fcc7a72a91ca338d3f09ccbd1.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336374.png">worddavd5ed32354c40b188c5ec3c11a27aa3dd.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336375.png">worddavdd3dc8fde9f8733d386d8af2b1f7eb5c.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336376.png">worddav3d02350a42c8ffb41ee2869789b3bd9c.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336377.png">worddavf95ecdb5646596d28c784e00e80808dd.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336378.png">worddaveba0f4fc0ce06df44683062e3e0b7b7e.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336379.png">worddav50c37cbc38347b6913929ecb42f746f2.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336380.png">worddavc7b85a09b831a55bbe59ee5cf2cb076c.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336381.png">worddav1b28be5f6bb65f75e84ab315a746f984.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336382.png">worddavc675074ff11307b0533a424adfeeadaf.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336383.png">worddav594974a6efdf8513898020b5b1f02c65.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336384.png">worddav15917f7bdc5ef03fa6c4667d89e63858.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336385.png">worddav9e910267610c72b1bf79ddf59aa0125c.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336386.png">worddavabb901e839cc9b9b6e4930e4cffee399.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336387.png">worddav26708e2c8a87c8ae10dba536dde4761e.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336388.png">worddav07a2fbcf7da42781fdce78a0f9d6dc00.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336389.png">worddav09023555f40c733cc41b4d5315785668.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336390.png">worddav1d46a1c1281626973cb83225fd0231b4.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336391.png">worddav359fd87870aa49791e4acc7abdf99296.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336392.png">worddav27b4f42fc539b9c8b7465fa69ecbdb4a.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336393.png">worddav493b1a80cbec7856b45b24c58632d2aa.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336394.png">worddav1ee8f714f14c07a7b37519297dc95af0.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336395.png">worddavb8ec498d02fbcdba357aabe68a9efcb8.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336396.png">worddav94e07a47f669a12ecb2dd4b45e81d862.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336397.png">worddav7b1cfbfaf910ba930aa65aee862f7455.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336398.png">image2020-8-17_23-40-13.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336399.png">image2020-8-17_23-41-59.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336400.png">image2020-8-17_23-43-1.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336401.png">image2020-8-17_23-32-34.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336311.jpg">image_1.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336310.jpg">image_2.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336309.jpg">image_3.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/42336281/42336306.jpg">image_6.jpg</a> (image/jpeg)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 04, 2024 11:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

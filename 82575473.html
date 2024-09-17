@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brocard : Процессы миграции товарной номенклатуры по текущим системам</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Brocard</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Discovery-phase_78839987.html">Discovery phase</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="82575438.html">Бизнес процессы, что необходимо изменить при отключении ETR, Tetra office brocard</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Brocard : Процессы миграции товарной номенклатуры по текущим системам
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Yaroslav Rudenok</span>, last modified on Feb 09, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <div class='plugin-tabmeta-details'><div class="table-wrap"><table class="confluenceTable"><colgroup><col/><col/></colgroup><tbody><tr><th class="confluenceTh">Целевая версия</th><td class="confluenceTd">1.0</td></tr><tr><th class="confluenceTh">Epic</th><td class="confluenceTd"></td></tr><tr><th class="confluenceTh">Статус документа</th><td class="confluenceTd"><span class="status-macro aui-lozenge">ЧЕРНОВИК</span></td></tr><tr><th class="confluenceTh">Владелец документа</th><td class="confluenceTd"><p><a class="confluence-userlink user-mention" data-username="y.rudenok@nodeart.io" href="https://wiki.nodeart.app/display/~y.rudenok@nodeart.io" data-linked-resource-id="33915157" data-linked-resource-version="2" data-linked-resource-type="userinfo" data-base-url="https://wiki.nodeart.app">Yaroslav Rudenok</a></p></td></tr><tr><th class="confluenceTh">Аналитик</th><td class="confluenceTd"><a class="confluence-userlink user-mention" data-username="y.rudenok@nodeart.io" href="https://wiki.nodeart.app/display/~y.rudenok@nodeart.io" data-linked-resource-id="33915157" data-linked-resource-version="2" data-linked-resource-type="userinfo" data-base-url="https://wiki.nodeart.app">Yaroslav Rudenok</a> </td></tr><tr><th class="confluenceTh">Разработчики</th><td class="confluenceTd"></td></tr><tr><th class="confluenceTh">QA (контроль качества)</th><td class="confluenceTd"></td></tr></tbody></table></div></div><h2 id="id-Процессымиграциитоварнойноменклатурыпотекущимсистемам-Цели">Цели</h2><ul><li>Оценить возможные риски и доработки текущих систем в связи с отключением ETR, Tetra</li></ul><h2 id="id-Процессымиграциитоварнойноменклатурыпотекущимсистемам-Asit">As it</h2><h3 id="id-Процессымиграциитоварнойноменклатурыпотекущимсистемам-ETR↔Tetra">ETR↔ Tetra</h3><h4 class="auto-cursor-target" id="id-Процессымиграциитоварнойноменклатурыпотекущимсистемам-ИмпортвЕТR">Импорт в ЕТR</h4><p>В ETR товароведами импортируется Excel файл с товарной номенклатурой в произвольном шаблоне, выгруженный из PIMCore</p><p>Справочники ведутся вручную</p><h4 id="id-Процессымиграциитоварнойноменклатурыпотекущимсистемам-ЭкспортсЕТR">Экспорт с ЕТR</h4><p>С ETR информация экспортируется только в Тетру</p><p>Поля &quot;Производитель&quot; и &quot;Фабрика&quot; при экспорте в Тетру объединяются в одно поле &quot;Производитель товара (Фабрика)&quot;. В<span style="color: rgb(23,43,77);"><span> </span>ЕТР это реализовано более правильно.</span><br/>У &quot;Производитель&quot; и &quot;Фабрика&quot; есть атрибут страна. Она может быть разная. При экспорте в Тетру действует определенная логика выбора страны: Если товар премиальный, то берется страна как атрибут &quot;Производителя&quot;, если товар масс маркет, то с &quot;Фабрика&quot; (<span style="color: rgb(23,43,77);">определенный алгоритм и договоренности, принятые внутри</span>)</p><p>Есть ограничения на экспорт в зависимости от состояния(статуса товара в системе). Например удаленные товары не экспортируются</p><p><br/></p><p>Tetra → excel → Navision</p><p>PIM Core → excel → Navision</p><h2 id="id-Процессымиграциитоварнойноменклатурыпотекущимсистемам-Предположения">Предположения</h2><ul><li></li></ul><h2 id="id-Процессымиграциитоварнойноменклатурыпотекущимсистемам-Tobe">To be</h2><ol><li>PIM Core → Navision</li><li>PIM Core → 1C УТП</li><li>PIM Core → Tetra WMS</li><li>PIM Core → Tetra office</li><li>PIM Core → Orders</li><li>PIM Core → Labels</li><li>PIM Core → DWH</li><li>PIM Core → Brocard.UA</li><li>Tetra WMS → PIM Core</li></ol><h2 id="id-Процессымиграциитоварнойноменклатурыпотекущимсистемам-Требования">Требования</h2><div class="table-wrap"><table class="confluenceTable"><colgroup><col/><col/><col/><col/><col/></colgroup><tbody><tr><th class="numberingColumn confluenceTh">#</th><th class="confluenceTh">Заголовок</th><th class="confluenceTh">User Story</th><th class="confluenceTh">Важность</th><th class="confluenceTh">Примечания</th></tr><tr><td class="numberingColumn confluenceTd">1</td><td class="confluenceTd"><p>В какой форме </p><p>эти данные нужны</p></td><td class="confluenceTd">Если это таблица PIM Core, то 8 часов на каждое взаимодействие</td><td class="confluenceTd"></td><td class="confluenceTd"><ul><li></li></ul></td></tr><tr><td class="numberingColumn confluenceTd">2</td><td class="confluenceTd"><ol><li>Tetra WMS → PIM Core</li></ol></td><td class="confluenceTd">По API можем получать данные 8 часов</td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td></tr></tbody></table></div><h2 id="id-Процессымиграциитоварнойноменклатурыпотекущимсистемам-Взаимодействиеспользователемидизайн">Взаимодействие с пользователем и дизайн</h2><p></p><h2 id="id-Процессымиграциитоварнойноменклатурыпотекущимсистемам-Вопросы">Вопросы</h2><p>Список вопросов, возникших в результате ознакомления с данным документом требований:</p><div class="table-wrap"><table class="confluenceTable"><tbody><tr><th class="confluenceTh">Вопрос</th><th class="confluenceTh">Результат</th></tr><tr><td class="confluenceTd"></td><td class="confluenceTd"></td></tr></tbody></table></div><h2 id="id-Процессымиграциитоварнойноменклатурыпотекущимсистемам-Чтоненужноделать">Что не нужно делать</h2><ul><li></li></ul>
+                    </div>
+
+                                        
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 04, 2024 11:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brocard : Импорт CSV файла (depricate)</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Brocard</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="12910795.html">Техническое задание</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="18350118.html">Инструкции</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Brocard : Импорт CSV файла (depricate)
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Illia Fedorovych</span>, last modified by <span class='editor'> Dmytro Svietnoi</span> on Nov 22, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>Нажмите ПКМ на &quot;Home&quot; в разделе &quot;Products&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297747/27297751.jpg" data-image-src="attachments/27297747/27297751.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297751" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_1.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297747" data-linked-resource-container-version="8"></span></p><p>Затем выберите пункт &quot;Product&quot; в разделе &quot;CSV Import&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297747/27297752.jpg" data-image-src="attachments/27297747/27297752.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297752" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_2.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297747" data-linked-resource-container-version="8"></span></p><p>В появившемся окне выберите файл для загрузки.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297747/27297753.jpg" data-image-src="attachments/27297747/27297753.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297753" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_3.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297747" data-linked-resource-container-version="8"></span></p><p>Откроется окно с настройками для импорта. На вкладке &quot;CSV File Preview&quot; можно увидеть предварительный просмотр файла.</p><p>Для того, чтобы перейти к настройкам колонок, нажмите &quot;Column Configuration&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297747/27297754.jpg" data-image-src="attachments/27297747/27297754.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297754" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_4.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297747" data-linked-resource-container-version="8"></span></p><p>На этой вкладке отображаются настройки колонок и их соответствие к полям товара в Pimcore.</p><p>Для того, чтобы создать соответствие, перетяните поле товара из раздела &quot;Class Attributes&quot; (1) к соответствующей колонке файла в разделе &quot;Selected Grid Columns&quot; (2).</p><p>Также в случае необходимости, вы можете использовать операторы в разделе &quot;Operators&quot; (3) для дополнительного преобразования данных. Для получения детальной информации смотрите <a href="https://pimcore.com/docs/latest/User_Documentation/DataObjects/CSV_Import/Operators/index.html" class="external-link" rel="nofollow">https://pimcore.com/docs/latest/User_Documentation/DataObjects/CSV_Import/Operators/index.html</a></p><p>Обратите внимание, что такие поля как &quot;Тип товара&quot;, &quot;Торговая марка&quot; и подобные являются ссылками на объекты, которые существуют в системе Pimcore. Их значения можно указать в CSV файле как полный путь к объекту (например, тип товара &quot;/Значение/Тип товара/activator&quot;), или же задать уже после импорта при редактировании карточки товара.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297747/27297755.jpg" data-image-src="attachments/27297747/27297755.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297755" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_5.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297747" data-linked-resource-container-version="8"></span></p><p>Также, Вы можете сохранять и загружать настройки для импорта. Для того, чтобы загрузить сохраненные настройки, нажмите на кнопку &quot;Load&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297747/27297756.jpg" data-image-src="attachments/27297747/27297756.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297756" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_6.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297747" data-linked-resource-container-version="8"></span></p><p>В появившемся окне выберите конфигурацию, которую хотите загрузить и нажмите &quot;ОК&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297747/27297757.jpg" data-image-src="attachments/27297747/27297757.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297757" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_7.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297747" data-linked-resource-container-version="8"></span></p><p>Для сохранения настроек нажмите кнопку &quot;Save&quot;.</p><p>Обратите внимание, что сохраняются данные не только из вкладки &quot;Column Configuration&quot;, а также из вкладок &quot;Resolver Settings&quot;, &quot;CSV Settings&quot; и &quot;Save and Share&quot;.</p><p><br/></p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297747/27297758.jpg" data-image-src="attachments/27297747/27297758.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297758" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_8.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297747" data-linked-resource-container-version="8"></span></p><p>В появившемся окне введите название для конфигурации и описание (необязательно), после чего нажмите &quot;Save&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297747/27297759.jpg" data-image-src="attachments/27297747/27297759.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297759" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_9.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297747" data-linked-resource-container-version="8"></span></p><p>На этой вкладке отображаются настройки распознавания объектов. Здесь можно задать колонки, которые будут использованы для определения того, существует ли уже данный объект в системе.</p><p>Для детальной информации смотрите <a href="https://pimcore.com/docs/latest/User_Documentation/DataObjects/CSV_Import/Resolver/index.html" class="external-link" rel="nofollow">https://pimcore.com/docs/latest/User_Documentation/DataObjects/CSV_Import/Resolver/index.html</a></p><p>Для того, чтобы перейти к настройкам файла CSV, нажмите &quot;CSV Settings&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297747/27297760.jpg" data-image-src="attachments/27297747/27297760.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297760" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_10.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297747" data-linked-resource-container-version="8"></span></p><p>На этой вкладке отображаются настройки файла CSV. Для того, чтобы перейти к параметрам конфигурации, нажмите &quot;Save &amp; Share&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297747/27297761.jpg" data-image-src="attachments/27297747/27297761.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297761" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_11.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297747" data-linked-resource-container-version="8"></span></p><p>На этой вкладке находятся настройки для сохранения и обмена конфигурации.</p><p>Для того, чтобы начать процесс импорта, используя текущие настройки, нажмите &quot;Import&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297747/27297762.jpg" data-image-src="attachments/27297747/27297762.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297762" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_12.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297747" data-linked-resource-container-version="8"></span></p><p>После завершения процесса импорта, Вы получите сообщение об успешном либо неудачном завершении. Нажмите кнопку &quot;ОК&quot;, чтобы перейти к результатам.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297747/27297763.jpg" data-image-src="attachments/27297747/27297763.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297763" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_13.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297747" data-linked-resource-container-version="8"></span></p><p>На вкладке &quot;Import Report&quot; находятся результаты последнего процесса импорта. В случае, если при импорте возникли проблемы, в колонке &quot;Message&quot; будет находиться описание ошибки.</p><p>Для того, чтобы открыть успешно импортированный товар, нажмите на значке &quot;Open&quot;.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297747/27297764.jpg" data-image-src="attachments/27297747/27297764.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297764" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_14.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297747" data-linked-resource-container-version="8"></span></p><p>Вы можете удостовериться в успешном проведении импорта, проверив карточку товара на наличие необходимой информации.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297747/27297765.jpg" data-image-src="attachments/27297747/27297765.jpg" data-unresolved-comment-count="0" data-linked-resource-id="27297765" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image_15.jpg" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="27297747" data-linked-resource-container-version="8"></span></p><p><br/></p><p>Также вы можете проверить наличие импортированных товаров в полном списке, нажав на папку &quot;Home&quot; и проверив их наличие в списке.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/27297747/42336274.png" data-image-src="attachments/27297747/42336274.png" data-unresolved-comment-count="0" data-linked-resource-id="42336274" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2020-8-17_23-32-34.png" data-base-url="https://wiki.nodeart.app" data-linked-resource-content-type="image/png" data-linked-resource-container-id="27297747" data-linked-resource-container-version="8"></span></p>
+                    </div>
+
+                                                            <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297751.jpg">image_1.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297752.jpg">image_2.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297753.jpg">image_3.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297754.jpg">image_4.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297755.jpg">image_5.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297756.jpg">image_6.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297757.jpg">image_7.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297758.jpg">image_8.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297759.jpg">image_9.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297760.jpg">image_10.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297761.jpg">image_11.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297762.jpg">image_12.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297763.jpg">image_13.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297764.jpg">image_14.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297765.jpg">image_15.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297766.json">ssie_image_1.json</a> (application/json)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297767.json">ssie_image_2.json</a> (application/json)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297768.json">ssie_image_3.json</a> (application/json)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297769.json">ssie_image_4.json</a> (application/json)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297770.json">ssie_image_5.json</a> (application/json)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297771.json">ssie_image_6.json</a> (application/json)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297772.json">ssie_image_7.json</a> (application/json)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297773.json">ssie_image_8.json</a> (application/json)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297774.json">ssie_image_9.json</a> (application/json)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297775.json">ssie_image_10.json</a> (application/json)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297776.json">ssie_image_11.json</a> (application/json)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297777.json">ssie_image_12.json</a> (application/json)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297778.json">ssie_image_13.json</a> (application/json)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297779.json">ssie_image_14.json</a> (application/json)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/27297780.json">ssie_image_15.json</a> (application/json)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/27297747/42336274.png">image2020-8-17_23-32-34.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 04, 2024 11:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

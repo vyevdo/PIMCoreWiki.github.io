@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brocard : Техническое задание</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Brocard</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Brocard : Техническое задание
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Valeriy Kulyk</span>, last modified on Apr 19, 2019
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p><br/></p><p>Цель настроить импорт данных в систему <a rel="nofollow" href="https://pimcore.com/en" class="external-link">https://pimcore.com/en</a> </p><p>Брокард имеет большое количество поставщиков среди них крупные организации, а также более мелкие.</p><p>Сейчас данные попадаю в разные системы и разном формате.</p><p>Есть идея воспользоваться системой Пимкор, которая даст возможность поставщикам вносить данные сразу в систему либо через АПИ. Таким образом Брокарду значительно проще будет управлять остатками, поскольку не будет разных форматов и у всех будет одинаковая информация. Пример файлов ниже</p><p><br/></p><p><br/></p><p><span class="confluence-embedded-file-wrapper"><a class="confluence-embedded-file" href="/download/attachments/12910795/04%202019%20CORRECT%20%D0%A4%D0%BE%D1%80%D0%BC%D0%B0%20%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%21%20%281%29.xlsm?version=1&amp;modificationDate=1555680571976&amp;api=v2" data-nice-type="null" data-file-src="/download/attachments/12910795/04%202019%20CORRECT%20%D0%A4%D0%BE%D1%80%D0%BC%D0%B0%20%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%21%20%281%29.xlsm?version=1&amp;modificationDate=1555680571976&amp;api=v2" data-linked-resource-id="12910798" data-linked-resource-type="attachment" data-linked-resource-container-id="12910795" data-linked-resource-default-alias="04 2019 CORRECT Форма пример ! (1).xlsm" data-mime-type="application/vnd.ms-excel.sheet.macroEnabled.12" data-has-thumbnail="false" data-linked-resource-version="1" data-can-edit="true" aria-label="04 2019 CORRECT Форма пример ! (1).xlsm"><img src="download/resources/com.atlassian.confluence.plugins.confluence-view-file-macro:view-file-macro-resources/images/placeholder-small-file.png" height="150"/><span class="title">04 2019 CORRECT Форма пример ! (1).xlsm</span></a><span class="companion-edit-button-placeholder edit-button-overlay" data-linked-resource-container-id="12910795" data-linked-resource-id="12910798" data-template-name="companionEditIcon" data-source-location="embedded-attachment"></span></span><span class="confluence-embedded-file-wrapper"><a class="confluence-embedded-file" href="/download/attachments/12910795/04%2019%20%D0%A4%D0%B8%D0%BB%D1%8C%D1%82%D1%80%D1%8B%20%282%29.xlsx?version=1&amp;modificationDate=1555680538751&amp;api=v2" data-nice-type="Excel Spreadsheet" data-file-src="/download/attachments/12910795/04%2019%20%D0%A4%D0%B8%D0%BB%D1%8C%D1%82%D1%80%D1%8B%20%282%29.xlsx?version=1&amp;modificationDate=1555680538751&amp;api=v2" data-linked-resource-id="12910796" data-linked-resource-type="attachment" data-linked-resource-container-id="12910795" data-linked-resource-default-alias="04 19 Фильтры (2).xlsx" data-mime-type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" data-has-thumbnail="true" data-linked-resource-version="1" data-can-edit="true" aria-label="04 19 Фильтры (2).xlsx"><img src="rest/documentConversion/latest/conversion/thumbnail/12910796/1" height="150"/></a><span class="companion-edit-button-placeholder edit-button-overlay" data-linked-resource-container-id="12910795" data-linked-resource-id="12910796" data-template-name="companionEditIcon" data-source-location="embedded-attachment"></span></span><span class="confluence-embedded-file-wrapper"><a class="confluence-embedded-file" href="/download/attachments/12910795/%D0%9A%D0%BE%D0%BF%D0%B8%D1%8F%20%D0%A4%D0%BE%D1%80%D0%BC%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D0%BD%D0%B0%D0%B2%D1%96%D0%B6%D0%B8%D0%BD%20%281%29.xlsx?version=1&amp;modificationDate=1555680557528&amp;api=v2" data-nice-type="Excel Spreadsheet" data-file-src="/download/attachments/12910795/%D0%9A%D0%BE%D0%BF%D0%B8%D1%8F%20%D0%A4%D0%BE%D1%80%D0%BC%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D0%BD%D0%B0%D0%B2%D1%96%D0%B6%D0%B8%D0%BD%20%281%29.xlsx?version=1&amp;modificationDate=1555680557528&amp;api=v2" data-linked-resource-id="12910797" data-linked-resource-type="attachment" data-linked-resource-container-id="12910795" data-linked-resource-default-alias="Копия Форма для навіжин (1).xlsx" data-mime-type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" data-has-thumbnail="true" data-linked-resource-version="1" data-can-edit="true" aria-label="Копия Форма для навіжин (1).xlsx"><img src="rest/documentConversion/latest/conversion/thumbnail/12910797/1" height="150"/></a><span class="companion-edit-button-placeholder edit-button-overlay" data-linked-resource-container-id="12910795" data-linked-resource-id="12910797" data-template-name="companionEditIcon" data-source-location="embedded-attachment"></span></span><span class="confluence-embedded-file-wrapper conf-macro output-inline has-comment-overlay"><span class="overlay" style="color: rgb(255,255,255);"><span class="file-type-desc-overlay"><span class="content">eadsheet <span class="confluence-embedded-file-wrapper"><a class="confluence-embedded-file" href="/download/attachments/12910795/%D0%97%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0%20%D0%A2%D0%B5%D1%82%D1%80%D0%B0%20%281%29.xls?version=1&amp;modificationDate=1555680584275&amp;api=v2" data-nice-type="Excel Spreadsheet" data-file-src="/download/attachments/12910795/%D0%97%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0%20%D0%A2%D0%B5%D1%82%D1%80%D0%B0%20%281%29.xls?version=1&amp;modificationDate=1555680584275&amp;api=v2" data-linked-resource-id="12910799" data-linked-resource-type="attachment" data-linked-resource-container-id="12910795" data-linked-resource-default-alias="Заявка Тетра (1).xls" data-mime-type="application/vnd.ms-excel" data-has-thumbnail="true" data-linked-resource-version="1" data-can-edit="true" aria-label="Заявка Тетра (1).xls"><img src="rest/documentConversion/latest/conversion/thumbnail/12910799/1" height="150"/></a><span class="companion-edit-button-placeholder edit-button-overlay" data-linked-resource-container-id="12910795" data-linked-resource-id="12910799" data-template-name="companionEditIcon" data-source-location="embedded-attachment"></span></span></span></span></span></span></p><p><br/></p><p>Ниже указаны задачи по проекту</p><div class="table-wrap"><table class="confluenceTable"><colgroup><col/><col/></colgroup><thead><tr><th class="confluenceTh"><p>ОПИС ЗАДАЧІ</p></th><th class="confluenceTh"><p>Орієнтовна кіл-сть годин</p></th></tr></thead><tbody><tr><td colspan="1" class="confluenceTd">Створення git репозиторія для збереження коду рішення і змін до нього</td><td colspan="1" class="confluenceTd"><p>1</p></td></tr><tr><td colspan="1" class="confluenceTd"><p>Створення проекту в системі JIRA  для фіксації і моніторингу виконання задач</p></td><td colspan="1" class="confluenceTd"><p>1</p></td></tr><tr><td colspan="1" class="confluenceTd"><p>Створення огортки для запуску проекту у docker для підтримання різних оточень (в тому числі, створення відмовостійкої конфігурації)</p></td><td colspan="1" class="confluenceTd"><p>28</p></td></tr><tr><td colspan="1" class="confluenceTd"><p>Створення налаштувань конфігурації для подальшого розвитку проекту</p></td><td colspan="1" class="confluenceTd"><p>30</p></td></tr><tr><td colspan="1" class="confluenceTd"><p>Налаштування продуктово-атрибутної моделі на підставі наданих Замовником даних</p></td><td colspan="1" class="confluenceTd"><p> 40</p></td></tr><tr><td colspan="1" class="confluenceTd"><p>Налаштування модулів імпорту даних (для масового початкового імпорту існуючих даних, для імпорту даних від постачальників з використанням API)</p></td><td colspan="1" class="confluenceTd"><p> 40</p></td></tr><tr><td colspan="1" class="confluenceTd"><p>Налаштування модулів експорту даних в форматі CSV (для існуючих ERP систем)</p></td><td colspan="1" class="confluenceTd"><p> 10</p></td></tr><tr><td colspan="1" class="confluenceTd"><p>Фіксація всіх дії під час проекту, об’єднання всієї інформації в пояснювальній записці</p></td><td colspan="1" class="confluenceTd"><p> 1</p></td></tr><tr><td colspan="1" class="confluenceTd"><p>Перенесення рішення в AWS інфраструктуру замовника</p></td><td colspan="1" class="confluenceTd"><p> 6</p></td></tr><tr><td colspan="1" class="confluenceTd"><p>Проведення фінальної демонстрації згідно умов Договору</p></td><td colspan="1" class="confluenceTd"><p> 3</p></td></tr></tbody></table></div><p><em>Общий срок:<strong> 40 календарных дней, </strong></em><em style="letter-spacing: 0.0px;"><strong>160 часов разработки</strong></em></p>
+                    </div>
+
+                                                            <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/12910795/12910796.xlsx">04 19 Фильтры (2).xlsx</a> (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/12910795/12910797.xlsx">Копия Форма для навіжин (1).xlsx</a> (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/12910795/12910798.xlsm">04 2019 CORRECT Форма пример ! (1).xlsm</a> (application/vnd.ms-excel.sheet.macroEnabled.12)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/12910795/12910799.xls">Заявка Тетра (1).xls</a> (application/vnd.ms-excel)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 04, 2024 11:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>
